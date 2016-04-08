@@ -7,3 +7,11 @@ $cool : #79B94A;
 $warm : #FC8F4F;
 $hot  : #DE1953;
 $sleep: #DEDEDE;
+
+//
+@mixin temperatures {
+  .cool  {fill: $cool;}
+  .warm  {fill: $warm;}
+  .hot   {fill: $hot;}
+  .sleep {fill: $sleep;}
+}
