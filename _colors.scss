@@ -1,18 +1,22 @@
-$slate-blue : #5F7C87;
-$slate-link : #547F91;
-$link-blue  : #029ADB;
+
+// general colors
+$white:       #ffffff;
+$black:       #000000;
+$slate-blue:  #5F7C87;
+$slate-link:  #547F91;
+$link-blue:   #029ADB;
 
 //
-$stat-bg : #EDEDED;
-
-// Stat state
-$cool    : #64C41D !important;
-$warm    : #FEA540 !important;
-$hot     : #ED4545 !important;
-$sleep   : #DEDEDE !important;
+$stat-bg: #EDEDED;
 
 //
-@mixin temperatures {
+@mixin core-temperatures {
+
+  //
+  $cool:  #64C41D !important;
+  $warm:  #FEA540 !important;
+  $hot:   #ED4545 !important;
+  $sleep: #DEDEDE !important;
 
   // fill temps
   .fill-temp {&.cool {fill: $cool;} &.warm {fill: $warm;} &.hot {fill: $hot;} &.sleep {fill: $sleep;}}
