@@ -654,7 +654,7 @@
 	<polyline class="st104" points="701.2,36.5 710.4,44.3 719.8,44.3 	"/>
 	<polyline class="st104" points="704.6,33 722.9,33 728.4,38.3 	"/>
 </g>
-<g id="monitor">
+<g id="monitor-instance">
 	<polyline class="st105" points="772.1,62.6 772.1,52.1 777.6,48.7 783.2,52.1 783.2,62.6 777.6,59.2 777.6,54.8 	"/>
 	<line class="st105" x1="772.1" y1="62.6" x2="777.6" y2="59.2"/>
 	<path class="st106" d="M777.6,59.2"/>
