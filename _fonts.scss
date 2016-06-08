@@ -5,3 +5,5 @@ $bold:     700;
 
 $arial:  "Arial", arial, sans;
 $monaco: "Monaco", monospace, sans;
+
+@mixin italic { font-style:italic; font-weight:$semibold; }
