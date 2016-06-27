@@ -40,7 +40,7 @@
 
       //
       &.checked                 { color: $dashboard_88; position:relative; background:$dashboard_112;
-        &:before                { color: $dashboard_88; position:absolute; top:16px; left:9px; @include pagodacons(normal, '\0063'); @include font-size(13px); }
+        // &:before                { color: $dashboard_88; position:absolute; top:16px; left:9px; @include pagodacons(normal, '\0063'); @include font-size(13px); }
         a, span                 { color: $dashboard_88; }
       }
     }
