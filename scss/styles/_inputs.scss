@@ -1,3 +1,10 @@
+//
+@mixin placeholderTxtColor($color) {
+  &::-webkit-input-placeholder  {color: $color}
+  &:-moz-placeholder            {color: $color}
+  &:-ms-input-placeholder       {color: $color}
+  &::-moz-placeholder           {color: $color}
+}
 
 //
 .input                            {@include font-size(15px); width:100%; color:$dashboard_100;

@@ -28,11 +28,3 @@ body {font-family: $proxima;}
     user-select: text;
     font-weight: bold;
 }
-
-//
-@mixin placeholderTxtColor($color) {
-  &::-webkit-input-placeholder  {color: $color}
-  &:-moz-placeholder            {color: $color}
-  &:-ms-input-placeholder       {color: $color}
-  &::-moz-placeholder           {color: $color}
-}
