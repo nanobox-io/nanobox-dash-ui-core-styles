@@ -1,12 +1,10 @@
-@import "buttons/*";
+// 
+button, .button {@include transition(); @include font-size(12px); position:relative; margin:0px; padding:5px; font-family:$lato; color:$dashboard_73; text-align:left; border:none; background:$white; cursor:pointer;
+  .label        {@include transition(); @include font-size(inherit); display:inline-block; margin:0px; font-family:inherit; color:inherit;}
 
-// .button-style is there in case you want the styles but not the default behavior of an HTML button
-button, .button-style{ @include transition(); @include font-size(12px); position:relative; margin:0px; padding:5px; font-family:$lato; color:$dashboard_73; text-align:left; border:none; background:$white; cursor:pointer;
-  .label      { @include transition(); @include font-size(inherit); display:inline-block; margin:0px; font-family:inherit; color:inherit; }
+  &.simple      {background:none;}
+  &.inverse     {color:$white; background:$dashboard_73;}
 
-  &.simple    { background:none; }
-  &.inverse   { color:$white; background:$dashboard_73; }
-
-  &:hover     { color:$dashboard_85; }
-  &:focus     { @extend :hover; }
+  &:hover       {color:$dashboard_85;}
+  &:focus       {@extend :hover;}
 }
