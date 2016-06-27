@@ -18,12 +18,12 @@
   .selection                    { @include truncate(); @include align('vertical'); width:100%; padding:0px 10px; }
   .open-area                    { display:none; position:absolute; top:5px; left:5px; width:100%; z-index:1; }
 
-  .search.input                 { display:none; float:none !important; margin:0px !important; padding:3px; background:$white;
-    &:after                     { @include pagodacons(normal, '\004D'); @include font-size(15px); position:absolute; top:0px; right:0px; padding:16px 9px; color:$dashboard_73; pointer-events:none; }
-    input                       { margin:0px; padding:5px; background:$dashboard_9; @include placeholderTxtColor($dashboard_41);
-      &:focus                   { @include placeholderTxtColor($white); background:$dashboard_73; }
-    }
-  }
+  // .search.input                 { display:none; float:none !important; margin:0px !important; padding:3px; background:$white;
+  //   &:after                     { @include pagodacons(normal, '\004D'); @include font-size(15px); position:absolute; top:0px; right:0px; padding:16px 9px; color:$dashboard_73; pointer-events:none; }
+  //   input                       { margin:0px; padding:5px; background:$dashboard_9; @include placeholderTxtColor($dashboard_41);
+  //     &:focus                   { @include placeholderTxtColor($white); background:$dashboard_73; }
+  //   }
+  // }
 
   ul.options                    { width:100%; overflow-y:auto; position:relative;
     li.option                   { @include truncate(); padding:10px 20px 10px 30px; color:$dashboard_41; background:$white; margin:0;
