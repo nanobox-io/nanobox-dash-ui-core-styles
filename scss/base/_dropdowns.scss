@@ -1,8 +1,8 @@
 
-.input.select  {
-  label        {}
-  select       {@include font-size(15px); display:inline-block; position:relative; width:inherit; height:41px; text-align:left; color:$dashboard_73; background:$dashboard_2; cursor:pointer; line-height:24px; padding-left:3px; overflow-y:auto; border-radius:0px;
-    option     {@include truncate(); padding:10px 20px 10px 30px; color:$dashboard_41; background:$white; margin:0;}
+.input.select                   {
+  label                         {}
+  select                        {@include font-size(15px); display:inline-block; position:relative; width:inherit; height:41px; text-align:left; color:$dashboard_73; background:$dashboard_2; cursor:pointer; line-height:24px; padding-left:3px; overflow-y:auto; border-radius:0px;
+    option                      {@include truncate(); padding:10px 20px 10px 30px; color:$dashboard_41; background:$white; margin:0;}
   }
 }
 
@@ -12,8 +12,8 @@
 .dropdown                       { @include font-size(15px); display:inline-block; position:relative; width:inherit; height:41px; text-align:left; color:$dashboard_73; background:$white; cursor:pointer; line-height:24px; padding-left:3px;
   & > *                         { display:inline-block; }
 
-  &:after                       { @include svgArrow('down', 'blue', 0deg, 1.25); content:""; position:absolute; top:40%; right:12px; }
-  &:hover:after                 { @include svgArrow('down', 'black', 0deg, 1.25); content:""; position:absolute; top:40%; right:12px; }
+  // &:after                       { @include svgArrow('down', 'blue', 0deg, 1.25); content:""; position:absolute; top:40%; right:12px; }
+  // &:hover:after                 { @include svgArrow('down', 'black', 0deg, 1.25); content:""; position:absolute; top:40%; right:12px; }
 
   .selection                    { @include truncate(); @include align('vertical'); width:100%; padding:0px 10px; }
   .open-area                    { display:none; position:absolute; top:5px; left:5px; width:100%; z-index:1; }
@@ -48,49 +48,28 @@
 
   //
   &.open                        {
-    .open-area                  { @include drop-shadow(0px, 1px, 7px, rgba(0, 0, 0, 0.15), 2px); display:inline-block; z-index:10001; }
+    .open-area                  {@include drop-shadow(0px, 1px, 7px, rgba(0, 0, 0, 0.15), 2px); display:inline-block; z-index:10001;}
   }
 
   // types - it's important that these come last to override any existing styles
 
   // errored dropdown
-  &.error                       { outline:1px solid $dashboard_126; }
+  &.error                       {outline:1px solid $dashboard_126;}
 
   // disabled
-  &.disabled                    { pointer-events:none; background:$dashboard_7;
-    .selection                  { color:$dashboard_14; }
-    &:after                     { border-top-color:$dashboard_15; }
+  &.disabled                    {pointer-events:none; background:$dashboard_7;
+    .selection                  {color:$dashboard_14;}
+    &:after                     {border-top-color:$dashboard_15;}
   }
 
   // searchable
   &.searchable                  {
-    &.open .search              { display:block; }
+    &.open .search              {display:block;}
   }
 
   // if is only one record in the collection we want the drop down to appear like
   // a single field
-  &.solitary                    { pointer-events:none;
-    &:after                     { display:none !important; }
+  &.solitary                    {pointer-events:none;
+    &:after                     {display:none !important;}
   }
-
-  //
-  &.minimal                     { padding:0px; background:none;
-    &:after                     { display:none; }
-    .open-area                  {
-      ul                        {
-        li                      { padding:5px 10px 5px 15px; }
-      }
-    }
-
-    &.open .open-area           { @include drop-shadow(0px, 0px, 0px, rgba(0, 0, 0, 0), 0px); }
-  }
-
-  //
-  &.dark                        { background:$dashboard_64; color:$dashboard_48;
-    &:after                     { @include svgArrow('down', 'blue', 0deg, 1.25); }
-    &:hover:after               { @include svgArrow('down', 'white', 0deg, 1.25); }
-  }
-
-  //
-  &.gray                        { background-color:$dashboard_9; color:$dashboard_47; }
 }
