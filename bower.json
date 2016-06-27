@@ -1,0 +1,15 @@
+{
+  "name": "nanobox-dash-ui-core-styles",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    ".gitignore",
+    "app",
+    "bower_components",
+    "node_modules",
+    "package.json"
+  ],
+  "dependencies": {
+    "normalize-css": "^4.1.1"
+  }
+}

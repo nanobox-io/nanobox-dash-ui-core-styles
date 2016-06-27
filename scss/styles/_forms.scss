@@ -1,0 +1,16 @@
+form                      {display:flex; flex-direction:column; width:100%;
+  .row                    {display:flex; align-items:center; justify-content:space-between; width:100%; margin:0px; padding:0px;
+
+    &:not(:last-child)    {margin-bottom:15px;}
+
+    //
+    .label                {@include font-size(13px); margin-bottom:5px; color:$dashboard_20;
+      label               {color:inherit;}
+    }
+
+    //
+    .input                {flex:1 1 100%;
+      &:not(:last-child)  {margin-right:8px;}
+    }
+  }
+}

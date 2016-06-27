@@ -1,0 +1,25 @@
+button.forward                      { @include transition(); margin-right:12px; color:$dashboard_92; background:$white;
+  &:after                           { @include transition(); content:""; position:absolute; top:0px; right:-24px; border:12px solid red; border-color:transparent transparent transparent $white; }
+
+  .tail                             { @include font-size(13px); position:absolute; top:5px; right:-60px; color:$dashboard_20;
+    span:last-child                 { @include font-size(13px); }
+  }
+
+  &:hover                           { background:$dashboard_73;
+    &:after                         { border-color:transparent transparent transparent $dashboard_73;}
+    .label                          { color:white; }
+  }
+  &.selected, &.active,             { color:$white; background:$dashboard_92;
+    &:after                         { border-color:transparent transparent transparent $dashboard_92; }
+    .label                          { color:inherit; }
+  }
+
+  &.inverse                         { @include transition(); color:$white; background:$dashboard_92;
+    &:after                         { @include transition(); content:""; position:absolute; top:0px; right:-10px; border:12px solid red; border-color:transparent transparent transparent $dashboard_92; }
+
+    &:hover, &.selected, &.active   { color:$dashboard_92; background:$white;
+      &:after                       { border-color:transparent transparent transparent $white; }
+      .label                        { color:inherit; }
+    }
+  }
+}

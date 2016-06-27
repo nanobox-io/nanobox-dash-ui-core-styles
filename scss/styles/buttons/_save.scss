@@ -1,0 +1,84 @@
+// adding this mixin because not all save buttons are in save zones
+@mixin button-save()      { @include transition(background, 0.1s); @include font-size(13px); color:$white; background:$dashboard_73; }
+// we were also doing pointer-events:none; in both of these, which is nice
+// but chrome recently introduced something where not all hover styles were getting applied when that rule was added dynamically
+@mixin button-saving()    { background:$dashboard_92; pointer-events:none }
+@mixin button-saved()     { background:$dashboard_106; pointer-events:none }
+
+// use this wrapper to handle this weird chrome bug:
+// when the save zone is at bottom of the page, gets shown, hidden, shown again
+// it just isn't there. if you inspect and toggle float it will re-appear.
+// so instead of floating, we just align it to the right
+.save-zone-wrapper        { text-align:right;
+  .save-zone              { float:initial; }
+}
+
+//
+.save-zone                {margin-left:auto; margin-top:12px;
+
+  &.widow                 { width:100%; margin-top:30px; padding-top:24px; text-align:right; border-top:1px solid $dashboard_11; }
+
+  .cancel                 { @include border-radius; @include font-size(12px); @include transition(all, 0); display:inline-block; width:86px; height:41px; margin-right:7px; padding:15px 0px; font-family:$museo; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
+    &:hover               { background: white; }
+  }
+
+  button.save             { @include border-radius; @include button-save; position:relative; width:148px; height:41px; font-family:$museo;  padding-left:48px;
+    &:before              { @include stamp('\0063', $dashboard_77, inherit); @include font-size(17px, 32px); padding:0; height:29px; width:29px; position:absolute; top:5px; left:8px; border:1px solid $dashboard_77 }
+    &:after               { margin-left:-12px; }
+    &.white               { background:$white; color:$dashboard_77; }
+  }
+
+  &.dirty, &.clean        {
+    button.save           {
+      &:hover             { @include transition(all, 0); background:white; color:$dashboard_73;
+        &:before          { color:$dashboard_72; border-color:$dashboard_72; }
+      }
+    }
+  }
+  .refresh                { display:none; @include font-size(13px); position:absolute; top:100%; right:10px; color:$dashboard_20; margin-top:9px; }
+
+  &.creating, &.saving    {
+    .cancel               { display:none; }
+    button.save           { @include button-saving;
+      &:before            {  }
+      &:after             { content:'Saving...'; display:inline-block; position:relative;  }
+      & > *               { display:none; }
+    }
+  }
+
+  &.created, &.saved      {
+    .cancel               { display:none; }
+    button.save           { @include button-saved;
+      &:before            { border:1px solid $white; color:$white; }
+      &:after             { content:'Saved'; display:inline-block; position:relative;  }
+      & > *               { display:none; }
+    }
+  }
+}
+
+// not all save buttons are in save zones
+button.save               {
+  &.creating, &.saving    { @include button-saving;
+    &:after               { content:'Saving...'; display:inline-block; position:relative;  }
+    & > *                 { display:none; }
+  }
+  &.created, &.saved       { @include button-saved;
+    &:after                { content:'Saved'; display:inline-block; position:relative;  }
+    & > *                  { display:none; }
+  }
+}
+
+button.submit             { @include button-save();
+  &:after                 { content:'' }
+  &.saving                { @include button-saving();
+    &:after               { content:'Submitting...'; }
+    .label                { display: none; }
+  }
+  &.saved                 { @include button-saved();
+    &:after               { content:'Submitted'; }
+    .label                { display:none; }
+  }
+}
+
+button.save/*, button.submit*/ { &:after { text-align: center; width: 100%; } }
+// .save-zone.creating, .save-zone.saving, .save-zone.created, .save-zone.saved { button.save, button.submit { &:after { text-align: center; width: 100%; margin-left: -12px; } } }

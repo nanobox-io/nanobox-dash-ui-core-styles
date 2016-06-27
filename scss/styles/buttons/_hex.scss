@@ -1,0 +1,29 @@
+button.hex                { @include transition(); position:relative; padding:0px; color:$dashboard_92; background:none;
+
+  .label                  { @include transition(); @include font-size(14px); padding:14px 8px; font-family:$museo; color:$dashboard_29; font-weight: bold;
+    .tail                 { @include font-size(13px); display:inline-block; position:relative; top:0px; right:-5px; color:$dashboard_20;
+      span:last-child     { @include font-size(13px); }
+    }
+  }
+
+  &:hover                 {
+    .label                { color:$dashboard_89; }
+    svg                   {
+      polygon             { fill:$dashboard_73; }
+      line                { stroke:$dashboard_29; }
+    }
+  }
+
+  // icon left
+  &.hex-icon-left       {
+    svg                 { float:left; }
+    .label              { float:left; }
+  }
+
+  // icon right
+  &.hex-icon-right      {
+    svg                 { float:right; }
+    .label              { float:right; }
+  }
+
+}

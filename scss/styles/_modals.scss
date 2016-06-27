@@ -1,0 +1,59 @@
+// @import "modals/*";
+
+#modalshield              {background:rgba(63, 73, 85, 0.50);}
+#modal                    { @include align('center'); @include font-size(14px); position:fixed; z-index:100000; width:590px; padding:34px 42px 26px; background:$dashboard_5; overflow:hidden; text-align:left;
+  p                       { font-size:16px; color:$dashboard_41; margin-bottom:45px; }
+  // &:not(.full-height)     { @include align('center'); }
+  // &.full-height           { display:block; position:absolute; margin:0 auto; top:10px; bottom:10px; left:0; right:0; }
+
+  //
+  .close                  { position:absolute; top:-4px; right:-5px; padding:20px; font-family:Pagodacons; font-weight:normal; color:$dashboard_31; cursor:pointer;
+    &:hover               { color:$dashboard_47; }
+  }
+
+  //
+  .body                   { display:inline-block; width:100%;
+    &:before              { color:$dashboard_73; }
+
+    .title                { @include truncate(); @include font-size(17px,20px); margin-bottom: 12px; color:$dashboard_47; }
+    .message              { float:left; width:95%; color:$dashboard_41; opacity:0.72; @include font-size(16px, 27px);
+      strong              { color:$dashboard_47; }
+    }
+
+    .input                { width:100%; }
+    span.error            { height:0; display:block; position:relative; top:-18px; color:$dashboard_126; }
+  }
+
+  //
+  button.action           { @include border-radius; @include font-size(14px); float:right; margin-top:12px; padding:10px 15px; color:$white; border:none;
+
+    &.confirm, &.save     { background:$dashboard_73;
+      &:hover             { background:white; color:$dashboard_73; @include transition(all, 0); }
+    }
+    &.cancel              { background:white; color:$dashboard_73;
+      &:hover             { color:$dashboard_47; }
+    }
+    &.destroy             { background:$dashboard_126; color:$white; text-align:center; position:relative;
+      .label              { @include transition(opacity, 0); }
+      &.destroying, &.destroyed {
+        .label            { opacity:0; }
+        &:before          { position:absolute; left:0; right:0; }
+      }
+      &.destroying        { background:$dashboard_127; color:$white;
+        &:before          { content:"Deleting"; }
+      }
+      &.destroyed         { background:$white; color:$dashboard_127;
+        &:before          { content:"Deleted" }
+      }
+    }
+
+    &.saving, &.creating  { background:$dashboard_92; }
+    &.saved, &.created    { background:$dashboard_106; }
+
+    &.disabled            { pointer-events:none; color:$dashboard_15; background:$dashboard_11; }
+  }
+  // for when you need more than one button
+  .bgroup                 { text-align:right;
+    button.action         { float:none; margin-left:13px; }
+  }
+}

@@ -1,0 +1,12 @@
+.check-group    {display:flex;
+
+  label         {@include font-size(15px); color:$dashboard_20;}
+
+  &.check-left  {
+    input       {margin-right:5px;}
+  }
+
+  &.check-right {
+    input       {margin-left:5px;}
+  }
+}

@@ -1,0 +1,38 @@
+//
+* {
+  @include box-sizing();
+  @include selection-color($dashboard_69);
+
+  // simple reset
+  margin:0px; padding:0px; border:none; outline:none; text-decoration:none; list-style-type:none; list-style-position:outside; vertical-align:top; border-collapse:collapse; resize:none; background:none;
+
+  // disable all selection by default
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//
+body {font-family: $proxima;}
+
+// enable selections
+.selectable, .selectable *, input, textarea {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    font-weight: bold;
+}
+
+//
+@mixin placeholderTxtColor($color) {
+  &::-webkit-input-placeholder  {color: $color}
+  &:-moz-placeholder            {color: $color}
+  &:-ms-input-placeholder       {color: $color}
+  &::-moz-placeholder           {color: $color}
+}

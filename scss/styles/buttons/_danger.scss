@@ -1,0 +1,51 @@
+.danger-zone                      { @include sprite("danger-bg"); margin:0px auto; padding:90px 107px; margin-left:57px;
+
+  .danger                         { @include transition(); position:relative; width:300px; height:68px; text-align:center; background:$dashboard_9;
+    & > *                         { display:inline-block;  }
+
+    button                        { position:absolute; top:0px; left:0px; width:100%; height:100%; background:none; pointer-events:none;
+      &.disabled                  { opacity:initial; }
+      .label                      { @include font-size(14px); width:60%; text-align:center; font-family:$museo; color:$dashboard_14; font-weight:700;
+        &:before                  { @include pagodacons(normal, '\004C'); position:relative; top:-2px; left:0px; margin-right:8px; @include font-size(16px, 0); }
+      }
+    }
+
+    .lock                         { @include font-size(14px); position:relative; float:right; width:105px; height:inherit; text-align:center; cursor:pointer; background:$white;
+      &:after                     { content:"Unlock"; display:block; @include font-size(14px); color:$dashboard_126; margin-left: -10px; @include align('vertical'); margin-top: 2px; }
+      &:before                    { content:""; height:0px; width:0px; position:absolute; left:-40px; top:0px; border-style:solid; border-color:transparent; border-right-color:$white; border-width:34px 20px; }
+      &:hover                     { background:$dashboard_126;
+        &:before                  { border-right-color:$dashboard_126;}
+        &:after                   { color:white; }
+      }
+    }
+
+    &.unlocked                    {
+      .lock                       { background:$dashboard_126;
+        &:before                  { border-right-color:$dashboard_126; }
+        &:after                   { content:"Lock"; color:white; }
+      }
+      button                      { background:white; pointer-events:initial;
+        .label                    { color:$dashboard_126;
+          &:before                { @include pagodacons(normal, '\0078'); color:$dashboard_126;  }
+        }
+        &:hover                   { background: $dashboard_127;
+          .label                  { color:white;
+            &:before              { color:white; }
+          }
+        }
+      }
+    }
+  }
+
+  &.simple                        { padding:0px; width:auto; height:initial; background:none;
+    .lock                         { background:$dashboard_4;
+      &:before                    { border-style:solid; border-color:transparent; border-right-color:$dashboard_4; border-width:34px 20px; }
+    }
+
+    &.unlocked                    {
+      button                      { background:none; }
+    }
+  }
+
+  &.disabled                      { opacity:0.25; pointer-events:none; & > * { opacity:0.25; pointer-events:none; } }
+}

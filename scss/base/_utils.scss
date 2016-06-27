@@ -1,0 +1,98 @@
+//
+@mixin align( $align ) {
+  position:relative;
+
+  //
+  @if $align == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform:     translateX(-50%);
+    transform:         translateX(-50%);
+  }
+
+  //
+  @else if $align == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform:     translateY(-50%);
+    transform:         translateY(-50%);
+  }
+
+  //
+  @else if $align == 'center' {
+    top: 50%; left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform:     translate(-50%, -50%);
+    transform:         translate(-50%, -50%);
+  }
+}
+
+//
+@mixin antiAlias(){
+  -webkit-font-smoothing: antialiased;
+}
+
+//
+@mixin border-radius ($r1:4px, $r2:4px, $r3:4px, $r4:4px){
+  -webkit-border-radius: $r1 $r2 $r3 $r4;
+  -moz-border-radius: $r1 $r2 $r3 $r4;
+  border-radius: $r1 $r2 $r3 $r4;
+}
+
+//
+@mixin box-sizing ($box-sizing:border-box) {
+  -moz-box-sizing: $box-sizing;
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}
+
+//
+@mixin drop-shadow ($xoffset:0px, $yoffset:1px, $blur:13px, $color:#050505, $radius:0px) {
+  -webkit-box-shadow: $xoffset $yoffset $blur $radius $color;
+  -moz-box-shadow: $xoffset $yoffset $blur $radius $color;
+  box-shadow: $xoffset $yoffset $blur $radius $color;
+}
+
+//
+@mixin selection-color($color){
+  ::selection { background:$color; }
+  ::-moz-selection { background:$color; }
+}
+
+//
+@mixin transition ($property:all, $duration:0.05s, $timing:linear, $delay:0s) {
+  @if $property != none {
+    -webkit-transition: $property $duration $timing $delay;
+    -moz-transition: $property $duration $timing $delay;
+    -o-transition: $property $duration $timing $delay;
+    transition: $property $duration $timing $delay;
+  } @else {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+
+//
+@mixin transform($scale:1, $rotate:0deg, $align:'none') {
+  $translate:0%, 0%;
+
+  @if       $align == 'horizontal' {left:initial; left:50%; $translate:0, -50%}
+  @else if  $align == 'vertical' {top:initial; top:50%; $translate:-50%, 0}
+  @else if  $align == 'center' {top:initial; top:50%; left:initial; left:50%; $translate:-50%, -50%}
+  // @else if  $align == 'none' {top:initial; left:initial;}
+
+  -webkit-transform: rotate( $rotate ) scale( $scale ) translate($translate);
+  -moz-transform:    rotate( $rotate ) scale( $scale ) translate($translate);
+  -ms-transform:     rotate( $rotate ) scale( $scale ) translate($translate);
+  -o-transform:      rotate( $rotate ) scale( $scale ) translate($translate);
+  transform:         rotate( $rotate ) scale( $scale ) translate($translate);
+}
+
+//
+@mixin truncate(){
+  white-space:    nowrap;
+  overflow:       hidden;
+  text-overflow:  ellipsis;
+}

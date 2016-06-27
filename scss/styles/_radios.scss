@@ -1,0 +1,12 @@
+.radio-group    {display:flex;
+
+  label         {@include font-size(15px); color:$dashboard_20;}
+
+  &.radio-left  {
+    input       {margin-right:5px;}
+  }
+
+  &.radio-right {
+    input       {margin-left:5px;}
+  }
+}

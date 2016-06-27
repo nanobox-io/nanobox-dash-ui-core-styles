@@ -1,0 +1,23 @@
+button.backward                     { @include transition(); margin-left:12px; color:$dashboard_92; background:$white;
+
+  &:before                          { @include transition(); content:""; position:absolute; top:0px; left:-24px; border:12px solid red; border-color:transparent $white transparent transparent; }
+
+  &:hover                           { background:$dashboard_31;
+    &:before                        { border-color:transparent $dashboard_31 transparent transparent;}
+    .label                          { color:$dashboard_103; }
+  }
+  &.selected, &.active              { color:$white; background:$dashboard_92;
+    &:before                        { border-color:transparent $dashboard_92 transparent transparent; }
+    .label                          { color:inherit; }
+  }
+
+  &.inverse                         { @include transition(); color:$white; background:$dashboard_92;
+    &:before                        { @include transition(); content:""; position:absolute; top:0px; left:-12px; border:12px solid red; border-color:transparent $dashboard_92 transparent transparent; }
+
+    &:hover                         {color:$dashboard_103; background:$dashboard_31;}
+    &.selected, &.active            { color:$white; background:$dashboard_92;
+      &:before                      { border-color:transparent $white transparent transparent; }
+      .label                        { color:inherit; }
+    }
+  }
+}

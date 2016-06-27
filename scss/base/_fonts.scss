@@ -1,0 +1,38 @@
+
+//
+$medium:    500;
+$semibold:  600;
+$bold:      700;
+
+//
+$arial:     "Arial", arial, sans;
+$monaco:    "Monaco", monospace, sans;
+$proxima:   "proxima-nova";
+
+// pagodacons
+@font-face {
+  font-family: Pagodacons;
+  font-weight: normal;
+  font-style: normal;
+  src: url('/assets/pagodacons-regular-webfont.eot');
+  src: url('/assets/pagodacons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/pagodacons-regular-webfont.woff2') format('woff2'),
+       url('/assets/pagodacons-regular-webfont.woff') format('woff'),
+       url('/assets/pagodacons-regular-webfont.ttf') format('truetype'),
+       url('/assets/pagodacons-regular-webfont.svg#pagodaconsregular') format('svg');
+}
+
+//
+@mixin pagodacons {
+  @include font-size(12px);
+  font-family: Pagodacons;
+  // -webkit-font-smoothing: antialiased;
+}
+
+// utils
+
+//
+@mixin font-size ($size, $line-height: $size) {font-size:$size; line-height:$line-height;}
+
+//
+@mixin italic {font-style:italic; font-weight:$semibold;}

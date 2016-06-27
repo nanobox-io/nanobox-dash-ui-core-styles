@@ -1,4 +1,6 @@
-@import "scss/meta/vars";
-@import "scss/meta/colors";
-@import "scss/meta/fonts";
-@import "scss/meta/utils";
+
+// order is significant
+@import "scss/base/_vars";
+@import "scss/base/_colors";
+@import "scss/base/_fonts";
+@import "scss/base/_utils";
