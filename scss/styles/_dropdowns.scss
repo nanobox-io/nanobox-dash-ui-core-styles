@@ -20,7 +20,7 @@
 
   .search.input                 { display:none; float:none !important; margin:0px !important; padding:3px; background:$white;
     &:after                     { @include pagodacons(normal, '\004D'); @include font-size(15px); position:absolute; top:0px; right:0px; padding:16px 9px; color:$dashboard_73; pointer-events:none; }
-    input                       { margin:0px; padding:5px; font-family:$museo; background:$dashboard_9; @include placeholderTxtColor($dashboard_41);
+    input                       { margin:0px; padding:5px; background:$dashboard_9; @include placeholderTxtColor($dashboard_41);
       &:focus                   { @include placeholderTxtColor($white); background:$dashboard_73; }
     }
   }
@@ -30,7 +30,7 @@
       &:not(:first-child)       { border-top:solid 1px $dashboard_4; }
       & > *                     { display:inline-block; }
 
-      a, span                   { @include truncate(); @include font-size(inherit); width:100%; font-family:$museo; color:$dashboard_23; }
+      a, span                   { @include truncate(); @include font-size(inherit); width:100%; color:$dashboard_23; }
 
       //
       &:hover, &.active         { background:$dashboard_111; color: $dashboard_88;

@@ -18,11 +18,11 @@
 
   &.widow                 { width:100%; margin-top:30px; padding-top:24px; text-align:right; border-top:1px solid $dashboard_11; }
 
-  .cancel                 { @include border-radius; @include font-size(12px); @include transition(all, 0); display:inline-block; width:86px; height:41px; margin-right:7px; padding:15px 0px; font-family:$museo; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
+  .cancel                 { @include border-radius; @include font-size(12px); @include transition(all, 0); display:inline-block; width:86px; height:41px; margin-right:7px; padding:15px 0px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
     &:hover               { background: white; }
   }
 
-  button.save             { @include border-radius; @include button-save; position:relative; width:148px; height:41px; font-family:$museo;  padding-left:48px;
+  button.save             { @include border-radius; @include button-save; position:relative; width:148px; height:41px; padding-left:48px;
     &:before              { @include stamp('\0063', $dashboard_77, inherit); @include font-size(17px, 32px); padding:0; height:29px; width:29px; position:absolute; top:5px; left:8px; border:1px solid $dashboard_77 }
     &:after               { margin-left:-12px; }
     &.white               { background:$white; color:$dashboard_77; }

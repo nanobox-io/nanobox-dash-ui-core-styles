@@ -1,5 +1,5 @@
-// 
-button, .button {@include transition(); @include font-size(12px); position:relative; margin:0px; padding:5px; font-family:$lato; color:$dashboard_73; text-align:left; border:none; background:$white; cursor:pointer;
+//
+button, .button {@include transition(); @include font-size(12px); position:relative; margin:0px; padding:5px; color:$dashboard_73; text-align:left; border:none; background:$white; cursor:pointer;
   .label        {@include transition(); @include font-size(inherit); display:inline-block; margin:0px; font-family:inherit; color:inherit;}
 
   &.simple      {background:none;}

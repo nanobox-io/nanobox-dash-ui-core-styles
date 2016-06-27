@@ -1,3 +1,0 @@
-.launch-button            { @include transition (all,0s); @include border-radius(50px, 0px, 0px, 50px); display:block; position:relative; margin:35px auto 0px auto; padding:0px 50px; height:45px; font-family:$museo; color:$dashboard_94; text-align:center; @include font-size(17px); background-color:$white;
-  &:after                 { content:""; position:absolute; top:0px; right:-15px; border-top:23px solid black; border-bottom:22px solid black; border-left:15px solid black; border-color:transparent transparent transparent $white; }
-}
