@@ -23,7 +23,7 @@
   }
 
   button.save             { @include border-radius; @include button-save; position:relative; width:148px; height:41px; padding-left:48px;
-    &:before              { @include stamp('\0063', $dashboard_77, inherit); @include font-size(17px, 32px); padding:0; height:29px; width:29px; position:absolute; top:5px; left:8px; border:1px solid $dashboard_77 }
+    &:before              { @include font-size(17px, 32px); padding:0; height:29px; width:29px; position:absolute; top:5px; left:8px; border:1px solid $dashboard_77 }
     &:after               { margin-left:-12px; }
     &.white               { background:$white; color:$dashboard_77; }
   }
