@@ -1,12 +1,18 @@
-.radio-group    {display:flex;
+.radio-group    {display:flex; align-items:center;
 
+  // default styles
   label         {@include font-size(15px); color:$dashboard_20;}
+  input         {}
 
+  //
   &.radio-left  {
     input       {margin-right:5px;}
+    label       {}
   }
 
+  //
   &.radio-right {
+    label       {}
     input       {margin-left:5px;}
   }
 }

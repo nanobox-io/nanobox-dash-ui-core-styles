@@ -2,7 +2,7 @@
 @import "bower_components/normalize-css/normalize";
 
 // Import all the variables, mixins, etc
-@import "core";
+@import "scss/_core";
 
-// Import any styles that should be shared across all libs & the dashboard
-@import "scss/styles/base";
+// Import any styles that will be shared across all libs & the dashboard
+@import "scss/_base";
