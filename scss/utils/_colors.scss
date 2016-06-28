@@ -1,11 +1,4 @@
 
-// general colors
-$white:       #ffffff;
-$black:       #000000;
-$slate-blue:  #5F7C87;
-$slate-link:  #547F91;
-$link-blue:   #029ADB;
-
 $lightest-gray:   #ededed;
 $lighter-gray:    #e8e8e8;
 $light-gray:      #dedede;
@@ -87,3 +80,10 @@ $devise_20:   #2C5365;
 @import 'colors/_nanobox';
 @import 'colors/_temperatures';
 @import 'colors/_vendor';
+
+// general colors
+$white:       #ffffff;
+$black:       #000000;
+$slate-blue:  #5F7C87;
+$slate-link:  #547F91;
+$link-blue:   #029ADB;

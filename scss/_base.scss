@@ -14,7 +14,7 @@
   vertical-align:top;
   border-collapse:collapse;
   resize:none;
-  background:none;
+  // background:none;
 
   // disable all selection by default
   -webkit-touch-callout: none;
@@ -49,10 +49,10 @@ p {
 body {font-family: $proxima;}
 
 //
-@import 'base/_buttons';
-@import 'base/_checks';
-@import 'base/_dropdowns';
-@import 'base/_forms';
-@import 'base/_inputs';
-@import 'base/_modals';
-@import 'base/_radios';
+@import 'base/buttons';
+@import 'base/checks';
+@import 'base/dropdowns';
+@import 'base/forms';
+@import 'base/inputs';
+@import 'base/modals';
+@import 'base/radios';
