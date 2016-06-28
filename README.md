@@ -9,7 +9,7 @@ SCSS helpers are loaded via your component's main .scss file. This give you acce
 
 EXAMPLE: `/app/scss/main.scss` should include `_core.scss` like so:
 ```
- @import '../../libs/core-styles/core';
+ @import '../../lib/assets/core-styles/scss/utils';
 ```
 
 ### 2) STYLES (actual display styles)
