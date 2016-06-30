@@ -46,7 +46,6 @@ $dropHeight: 40px;
 
   //
   &.open                        {
-    .selection                  {border-bottom:solid 1px $dashboard_4;}
     .open-area                  {display:flex; flex-direction:column; z-index:10001;}
   }
 
