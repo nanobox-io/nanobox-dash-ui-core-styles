@@ -20,7 +20,7 @@ $dropHeight: 40px;
   .selection                    {@include truncate();}
 
   //
-  .open-area                    {@include drop-shadow(5px, 5px, 5px, rgba(0, 0, 0, 0.15), -3px); display:none; position:absolute; top:$dropHeight; left:0px; width:100%; z-index:1;
+  .open-area                    {@include drop-shadow(5px, 5px, 5px, rgba(0, 0, 0, 0.15), -3px); display:none; position:absolute; top:$dropHeight; left:0px; min-width:100%; width:auto; z-index:1;
     .option                     {@include truncate(); @include font-size(inherit); display:flex; align-items:center; width:100%; padding:8px 20px; color:$dashboard_23; background:$white; cursor:pointer;
 
       &:not(:first-child)       {border-top:solid 1px $dashboard_4;}
@@ -46,6 +46,7 @@ $dropHeight: 40px;
 
   //
   &.open                        {
+    .selection                  {border-bottom:solid 1px $dashboard_4;}
     .open-area                  {display:flex; flex-direction:column; z-index:10001;}
   }
 
