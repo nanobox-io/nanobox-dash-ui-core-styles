@@ -1,76 +1,65 @@
-// adding this mixin because not all save buttons are in save zones
-@mixin button-save()      { @include transition(background, 0.1s); @include font-size(13px); display:flex; align-items:center; justify-content:space-between; padding:0px 18px; color:$white; background:$dashboard_73; }
-// we were also doing pointer-events:none; in both of these, which is nice
-// but chrome recently introduced something where not all hover styles were getting applied when that rule was added dynamically
-@mixin button-saving()    { background:$dashboard_92; pointer-events:none }
-@mixin button-saved()     { background:$dashboard_106; pointer-events:none }
+button.save                   {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; width:148px; height:41px; padding:0px 18px; color:$white; background:$dashboard_73;
 
-//
-.save-zone                {display:flex; align-items:center; justify-content:flex-end; margin-left:auto; margin-top:12px;
+  &:after                     {content:'Save Changes'; margin-left:8px;}
+
+  .loader                     {display:none;}
+  svg                         {display:block;}
 
   //
-  .cancel                 { @include border-radius; @include font-size(12px); @include transition(all, 0); display:inline-block; width:86px; height:41px; margin-right:7px; padding:15px 0px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
-    &:hover               { background: white; }
+  &:hover                     {color:$dashboard_73; background:$white; svg {path {fill:$dashboard_73;}}}
+
+  // display
+  &.creating, &.created,
+  &.saving,   &.saved,
+  &.submitting, &.submitted   {pointer-events:none;
+    .loader                   {display:block;}
+    svg                       {display:none;}
   }
 
-  //
-  button.save             {@include border-radius; @include button-save; position:relative; width:148px; height:41px;
-    &:before              {@include font-size(17px, 32px); padding:0; height:29px; width:29px; position:absolute; top:5px; left:8px; border:1px solid $dashboard_77;}
-    &:after               {margin-left:-12px; }
-  }
+  // content
+  &.creating, &.saving        {color:$white; background:$dashboard_92; &:after {content:'Saving...';}}
+  &.created, &.saved          {color:$white; background:$dashboard_106; &:after {content:'Saved';}}
+  &.submitting                {color:$white; background:$dashboard_106; &:after {content:'Submitting...';}}
+  &.submitted                 {color:$white; background:$dashboard_106; &:after {content:'Submitted';}}
 
-  //
-  &.dirty, &.clean        {
-    button.save           {
-      &:hover             { @include transition(all, 0); background:white; color:$dashboard_73;
-        &:before          { color:$dashboard_72; border-color:$dashboard_72; }
-      }
-    }
+  // loader
+  .loader {
+    font-size: 0px;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: loaderanim 0.5s infinite linear;
+    animation: loaderanim 0.5s infinite linear;
   }
-  .refresh                { display:none; @include font-size(13px); position:absolute; top:100%; right:10px; color:$dashboard_20; margin-top:9px; }
-
-  //
-  &.creating, &.saving    {
-    .cancel               { display:none; }
-    button.save           { @include button-saving;
-      &:before            {  }
-      &:after             { content:'Saving...'; display:inline-block; position:relative;  }
-      & > *               { display:none; }
-    }
+  .loader,
+  .loader:after {border-radius: 50%; width: 20px; height: 20px;}
+  @-webkit-keyframes loaderanim {
+    0%    {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+    100%  {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
   }
-
-  //
-  &.created, &.saved      {
-    .cancel               { display:none; }
-    button.save           { @include button-saved;
-      &:before            { border:1px solid $white; color:$white; }
-      &:after             { content:'Saved'; display:inline-block; position:relative;  }
-      & > *               { display:none; }
-    }
-  }
-}
-
-// not all save buttons are in save zones
-button.save                 {
-  &.creating, &.saving      {@include button-saving;
-    &:after                 {content:'Saving...'; display:inline-block; position:relative;}
-    & > *                   {display:none; }
-  }
-  &.created, &.saved        {@include button-saved;
-    &:after                 {content:'Saved'; display:inline-block; position:relative;}
-    & > *                   {display:none; }
+  @keyframes loaderanim {
+    0%    {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+    100%  {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
   }
 }
 
 //
-button.submit             {@include button-save();
-  &:after                 {content:'' }
-  &.saving                {@include button-saving();
-    &:after               {content:'Submitting...';}
-    .label                {display: none; }
+.save-zone                    {display:flex; align-items:center; justify-content:flex-end; margin-left:auto; margin-top:12px;
+
+  //
+  .cancel                     {@include border-radius; @include font-size(12px); @include transition(all, 0); display:inline-block; width:86px; height:41px; margin-right:7px; padding:15px 0px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
+    &:hover                   {background: white;}
   }
-  &.saved                 {@include button-saved();
-    &:after               {content:'Submitted';}
-    .label                {display:none;}
+
+  //
+  &.creating,   &.created,
+  &.saving,     &.saved,
+  &.submitting, &.submitted   {
+    .cancel                   {display:none;}
   }
 }

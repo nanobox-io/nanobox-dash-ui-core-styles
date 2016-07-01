@@ -34,7 +34,8 @@
 // enable selections
 .selectable,
 .selectable *,
-input,
+input[type="text"],
+input[type="email"],
 textarea,
 p {
   -webkit-touch-callout: text;

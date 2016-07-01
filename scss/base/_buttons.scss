@@ -1,12 +1,10 @@
 //
-button, .button {@include transition(); @include font-size(12px); position:relative; margin:0px; padding:5px; color:$dashboard_73; text-align:left; border:none; background:$white; cursor:pointer;
-  .label        {@include transition(); @include font-size(inherit); display:inline-block; margin:0px; font-family:inherit; color:inherit;}
+button, .button       {@include transition(); @include font-size(12px); position:relative; margin:0px; padding:5px; color:$dashboard_73; text-align:left; border:none; background:$white; cursor:pointer;
+  &:hover , &:focus   {color:$dashboard_85;}
 
-  &.simple      {background:none;}
-  &.inverse     {color:$white; background:$dashboard_73;}
+  .label              {@include transition(); @include font-size(inherit); margin:0px; font-family:inherit; color:inherit;}
 
-  &:hover       {color:$dashboard_85;}
-  &:focus       {@extend :hover;}
+  &.simple            {background:none;}
 }
 
 //
