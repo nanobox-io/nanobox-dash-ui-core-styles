@@ -1,0 +1,45 @@
+button.destroy                {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; width:148px; height:41px; padding:0px 18px; color:$white; background:$dashboard_126;
+
+  &:after                     {content:'Destroy'; margin-left:8px;}
+
+  .loader                     {display:none;}
+  svg                         {display:block; transform: scale(0.6);}
+
+  //
+  &:hover                     {color:$dashboard_126; background:$white; svg {path {fill:$dashboard_126;}}}
+
+  // display
+  &.destroying, &.destroyed,
+  &.deleting, &.deleted,
+  &.removing, &.removed       {pointer-events:none;
+    .loader                   {display:block;}
+    svg                       {display:none;}
+  }
+
+  // content
+  &.destroying                {color:$white; background:$dashboard_122; &:after {content:'Destroying...';}}
+  &.destroyed                 {color:$white; background:$dashboard_127; &:after {content:'Destroyed';}}
+  &.deleting                  {color:$white; background:$dashboard_122; &:after {content:'Deleting...';}}
+  &.deleted                   {color:$white; background:$dashboard_127; &:after {content:'Deleted';}}
+  &.removing                  {color:$white; background:$dashboard_122; &:after {content:'Removing...';}}
+  &.removed                   {color:$white; background:$dashboard_127; &:after {content:'Removed';}}
+
+  //
+  &.disabled                  {cursor:not-allowed;}
+}
+
+//
+.destroy-zone                 {display:flex; align-items:center; justify-content:flex-end; margin-left:auto; margin-top:12px;
+
+  //
+  .cancel                     {@include border-radius; @include font-size(12px); @include transition(all, 0); display:inline-block; width:86px; height:41px; margin-right:7px; padding:15px 0px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
+    &:hover                   {background: white;}
+  }
+
+  //
+  &.destroying,   &.destroyed,
+  &.deleting,     &.deleted,
+  &.removing,     &.removed   {
+    .cancel                   {display:none;}
+  }
+}
