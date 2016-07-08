@@ -40,14 +40,3 @@
     input                         {color:$dashboard_23; background:$dashboard_8;}
   }
 }
-
-//
-.textarea                         { @include font-size(15px); position:relative; width:100%; color:$dashboard_77; background:$dashboard_2; overflow:hidden;
-  &.code                          { padding:0px; }
-
-  &.error                         { outline:1px solid $dashboard_126; }
-
-  textarea                        { @include font-size(inherit, inherit); width:100%; height:100%; padding:10px; font-family:inherit; color:inherit; background:$white; @include placeholderTxtColor($dashboard_11);
-    &:focus                       { background:white; color:$dashboard_30; @include placeholderTxtColor($dashboard_11); }
-  }
-}

@@ -3,6 +3,8 @@
   @include box-sizing();
   @include selection-color($dashboard_69);
 
+  &:before, &:after {box-sizing:border-box;}
+
   // simple reset; this is should come after normalize.css is imported
   margin:0px;
   padding:0px;
