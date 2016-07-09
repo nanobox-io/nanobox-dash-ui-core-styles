@@ -9,30 +9,8 @@ $blue:            #76b5c1;
 $dark-blue:       #173048;
 $yellow:          #FFCC4A;
 
-// DEVISE
-$devise_1:    #F9FDFF;
-$devise_2:    #F0FBFF;
-$devise_3:    #DAEAF0;
-$devise_4:    #BED1D9;
-$devise_5:    #ACBDC4;
-$devise_6:    #8CA4AF;
-$devise_7:    #8BA6AF;
-$devise_8:    #97AEB8;
-$devise_9:    #6BA3BA;
-$devise_10:   #597F94;
-$devise_11:   #50BDE5;
-$devise_12:   #43ADDD;
-$devise_13:   #3DA8CC;
-$devise_14:   #1B8BC9;
-$devise_15:   #1D7FC0;
-$devise_16:   #046B90;
-$devise_17:   #003D5F;
-$devise_18:   #001C25;
-$devise_19:   #337A72;
-$devise_20:   #2C5365;
-$devise_21:   #2e98f2;
-
 //
+@import 'colors/_devise';
 @import 'colors/_nanobox';
 @import 'colors/_temperatures';
 @import 'colors/_vendor';
