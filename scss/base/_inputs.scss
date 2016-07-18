@@ -23,7 +23,7 @@ input                             {@include font-size(15px); @include transition
 input[type="submit"]              {cursor:pointer;}
 
 //
-.input                            {@include font-size(15px); width:100%; color:$dashboard_100;
+.input                            {@include font-size(15px); display:flex; flex-direction:column; width:100%; color:$dashboard_100;
 
   //
   label                           {
