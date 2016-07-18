@@ -33,6 +33,29 @@
 }
 
 //
+@mixin arrow ($direction, $color:red, $scale:1) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 15px 15px;
+  border-color: transparent transparent $color transparent;
+
+  // up by default
+  $rotate: rotate(0deg);
+
+  @if $direction == "down" {
+    $rotate: 180deg;
+  } @else if $direction == "left" {
+    $rotate: -90deg;
+  } @else if $direction == "right" {
+    $rotate: 90deg;
+  }
+
+  //
+  transform: rotate(#{$rotate}) scale(#{$scale});
+}
+
+//
 @mixin border-radius ($r1:4px, $r2:4px, $r3:4px, $r4:4px){
   -webkit-border-radius: $r1 $r2 $r3 $r4;
   -moz-border-radius: $r1 $r2 $r3 $r4;

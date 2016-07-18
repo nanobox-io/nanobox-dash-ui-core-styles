@@ -1,22 +1,41 @@
 
-.input.select                   {
-  label                         {}
-  select                        {@include font-size(15px); display:inline-block; position:relative; width:inherit; height:41px; text-align:left; color:$dashboard_73; background:$dashboard_2; cursor:pointer; line-height:24px; padding-left:3px; overflow-y:auto; border-radius:0px;
-    option                      {@include truncate(); padding:10px 20px 10px 30px; color:$dashboard_41; background:$white; margin:0;}
-  }
-}
+// .input.select                   {
+//   label                         {}
+//   select                        {@include font-size(15px, 24px); display:inline-block; position:relative; width:inherit; height:41px; text-align:left; color:$dashboard_73; background:$dashboard_2; cursor:pointer; overflow-y:auto; border-radius:0px;
+//     option                      {@include truncate(); padding:10px 20px 10px 30px; color:$dashboard_41; background:$white; margin:0;}
+//   }
+// }
+
+$dropHeight: 40px;
 
 #dropshield                     {background:rgba(63, 73, 85, 0);}
 
 //
-.dropdown                       { @include font-size(15px); display:inline-block; position:relative; width:inherit; height:41px; text-align:left; color:$dashboard_73; background:$white; cursor:pointer; line-height:24px; padding-left:3px;
-  & > *                         { display:inline-block; }
+.dropdown                       {@include font-size(15px, 24px); position:relative; display:flex; align-items:center; justify-content:space-between; height:$dropHeight; padding:0px 10px; text-align:left; color:$dashboard_73; background:$white; cursor:pointer;
 
-  // &:after                       { @include svgArrow('down', 'blue', 0deg, 1.25); content:""; position:absolute; top:40%; right:12px; }
-  // &:hover:after                 { @include svgArrow('down', 'black', 0deg, 1.25); content:""; position:absolute; top:40%; right:12px; }
+  &:after                       {@include arrow('down', $dashboard_73, 0.40); content:"";}
+  &:hover:after                 {@include arrow('down', $dashboard_73, 0.40); content:"";}
 
-  .selection                    { @include truncate(); @include align('vertical'); width:100%; padding:0px 10px; }
-  .open-area                    { display:none; position:absolute; top:5px; left:5px; width:100%; z-index:1; }
+  //
+  .selection                    {@include truncate();}
+
+  //
+  .open-area                    {@include drop-shadow(5px, 5px, 5px, rgba(0, 0, 0, 0.15), -3px); display:none; position:absolute; top:$dropHeight; left:0px; min-width:100%; width:auto; z-index:1;
+    .option                     {@include truncate(); @include font-size(inherit); display:flex; align-items:center; width:100%; padding:8px 20px; color:$dashboard_23; background:$white; cursor:pointer;
+
+      &:not(:first-child)       {border-top:solid 1px $dashboard_4;}
+
+      //
+      &:hover, &.active         {color: $dashboard_88; background:$dashboard_111;
+        // &:before                {color: $dashboard_88;}
+      }
+
+      //
+      &.checked                 {color: $dashboard_88; background:$dashboard_112;
+        // &:before                { color: $dashboard_88; position:absolute; top:16px; left:9px; @include pagodacons(normal, '\0063'); @include font-size(13px); }
+      }
+    }
+  }
 
   // .search.input                 { display:none; float:none !important; margin:0px !important; padding:3px; background:$white;
   //   &:after                     { @include pagodacons(normal, '\004D'); @include font-size(15px); position:absolute; top:0px; right:0px; padding:16px 9px; color:$dashboard_73; pointer-events:none; }
@@ -25,41 +44,9 @@
   //   }
   // }
 
-  ul.options                    { width:100%; overflow-y:auto; position:relative;
-    li.option                   { @include truncate(); padding:10px 20px 10px 30px; color:$dashboard_41; background:$white; margin:0;
-      &:not(:first-child)       { border-top:solid 1px $dashboard_4; }
-      & > *                     { display:inline-block; }
-
-      a, span                   { @include truncate(); @include font-size(inherit); width:100%; color:$dashboard_23; }
-
-      //
-      &:hover, &.active         { background:$dashboard_111; color: $dashboard_88;
-        &:before                { color: $dashboard_88; }
-        a, span                 { color: $dashboard_88; }
-      }
-
-      //
-      &.checked                 { color: $dashboard_88; position:relative; background:$dashboard_112;
-        // &:before                { color: $dashboard_88; position:absolute; top:16px; left:9px; @include pagodacons(normal, '\0063'); @include font-size(13px); }
-        a, span                 { color: $dashboard_88; }
-      }
-    }
-  }
-
   //
   &.open                        {
-    .open-area                  {@include drop-shadow(0px, 1px, 7px, rgba(0, 0, 0, 0.15), 2px); display:inline-block; z-index:10001;}
-  }
-
-  // types - it's important that these come last to override any existing styles
-
-  // errored dropdown
-  &.error                       {outline:1px solid $dashboard_126;}
-
-  // disabled
-  &.disabled                    {pointer-events:none; background:$dashboard_7;
-    .selection                  {color:$dashboard_14;}
-    &:after                     {border-top-color:$dashboard_15;}
+    .open-area                  {display:flex; flex-direction:column; z-index:10001;}
   }
 
   // searchable
@@ -67,8 +54,8 @@
     &.open .search              {display:block;}
   }
 
-  // if is only one record in the collection we want the drop down to appear like
-  // a single field
+  // solitary; if is only one record in the collection we want the drop down to
+  // appear like a single field
   &.solitary                    {pointer-events:none;
     &:after                     {display:none !important;}
   }
