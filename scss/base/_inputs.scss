@@ -23,7 +23,7 @@ select                            {height:36px; color:$dashboard_73; background:
   // TYPES
 
   // checkboxes, radio buttons
-  &.boolean, &.radio_buttons      {flex-direction:row; align-items:flex-start; justify-content:space-around;
+  &.boolean, &.radio_buttons      {flex-direction:row; align-items:flex-start; justify-content:space-between;
     label                         {@include font-size(14px); max-width:95%; margin:0px; color:$dashboard_42;}
     input                         {height:auto;}
   }

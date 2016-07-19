@@ -41,7 +41,7 @@
   border-color: transparent transparent $color transparent;
 
   // up by default
-  $rotate: rotate(0deg);
+  $rotate: 0deg;
 
   @if $direction == "down" {
     $rotate: 180deg;

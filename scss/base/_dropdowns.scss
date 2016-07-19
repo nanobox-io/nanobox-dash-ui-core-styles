@@ -17,7 +17,7 @@ $dropHeight: 40px;
   &:hover:after                 {@include arrow('down', $dashboard_73, 0.40); content:"";}
 
   //
-  .selection                    {@include truncate();}
+  .selection                    {@include truncate(); display:flex; align-items:center;}
 
   //
   .open-area                    {@include drop-shadow(5px, 5px, 5px, rgba(0, 0, 0, 0.15), -3px); display:none; position:absolute; top:$dropHeight; left:0px; min-width:100%; width:auto; z-index:1;
