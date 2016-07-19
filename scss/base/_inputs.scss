@@ -7,35 +7,25 @@
 }
 
 //
-input                             {@include font-size(15px); @include transition(all, 0.08s); height:36px; padding:6px 10px; background:$white;
-  // &:not([type="submit"])          {@include placeholderTxtColor($dashboard_36); width:100%;
-  //   &:valid                       {@include transition(color, 1s); color:$dashboard_73;}
-  //   &:focus                       {@include placeholderTxtColor($dashboard_11); @include transition(background, 0s); color:$dashboard_30; background:$white;}
-  // }
-}
-
-// input[type="text"],
-// input[type="password"],
-// input[type="email"]               {@include placeholderTxtColor($dashboard_36); width:100%;
-//   &:valid                         {@include transition(color, 1s); color:$dashboard_73;}
-//   &:focus                         {@include placeholderTxtColor($dashboard_11); @include transition(background, 0s); color:$dashboard_30; background:$white;}
-// }
+input                             {@include font-size(15px); @include transition(all, 0.08s); @include placeholderTxtColor($dashboard_9); color:$dashboard_73; height:36px; padding:6px 10px; background:$white;}
 input[type="submit"]              {cursor:pointer;}
+
+//
+select                            {height:36px; color:$dashboard_73; background:$white;}
+
 
 //
 .input                            {@include font-size(15px); display:flex; flex-direction:column; width:100%; color:$dashboard_100;
 
   //
-  label                           {
-    &.text, &.string,
-    &.password,
-    &.email                       {@include font-size(13px); width:100%; margin-bottom:5px; color:$dashboard_15;}
-  }
+  label                           {@include font-size(13px); width:100%; margin-bottom:5px; color:$dashboard_15;}
 
-  //
-  &.field_with_errors             {
-    input                         {outline:1px solid $dashboard_126;}
-    .error                        {@include font-size(11px); margin:2px 0px 8px 0px; color:$dashboard_126;}
+  // TYPES
+
+  // checkboxes, radio buttons
+  &.boolean, &.radio_buttons      {flex-direction:row; align-items:flex-start; justify-content:space-around;
+    label                         {@include font-size(14px); max-width:95%; margin:0px; color:$dashboard_42;}
+    input                         {height:auto;}
   }
 
   // STATES
