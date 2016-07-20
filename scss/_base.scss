@@ -52,6 +52,7 @@ p {
 body {font-family: $proxima;}
 
 //
+@import 'base/globals';
 @import 'base/buttons';
 @import 'base/dropdowns';
 @import 'base/forms';
