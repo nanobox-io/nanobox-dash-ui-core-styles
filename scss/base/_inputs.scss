@@ -18,13 +18,19 @@ select                            {height:36px; color:$dashboard_73; background:
 .input                            {@include font-size(15px); display:flex; flex-direction:column; width:100%; color:$dashboard_100;
 
   //
-  label                           {@include font-size(13px); width:100%; margin-bottom:5px; color:$dashboard_15;}
+  label                           {@include font-size(13px); margin-bottom:5px; color:$dashboard_15;}
 
   // TYPES
 
-  // checkboxes, radio buttons
-  &.boolean, &.radio_buttons      {flex-direction:row; align-items:flex-start; justify-content:space-between;
-    label                         {@include font-size(14px); max-width:95%; margin:0px; color:$dashboard_42;}
+  // checkboxes
+  &.boolean                       {flex-direction:row; align-items:flex-start; justify-content:space-between;
+    label                         {@include font-size(14px); width:96%; margin:0px; color:$dashboard_42;}
+    input                         {height:auto;}
+  }
+
+  // radio buttons
+  &.radio_buttons                 {flex-direction:row; align-items:flex-start; justify-content:space-between;
+    label                         {@include font-size(14px); margin:0px; color:$dashboard_42;}
     input                         {height:auto;}
   }
 
