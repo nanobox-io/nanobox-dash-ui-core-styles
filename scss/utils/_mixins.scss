@@ -119,3 +119,7 @@
   overflow:       hidden;
   text-overflow:  ellipsis;
 }
+
+@mixin selectable(){
+  user-select: all;
+}

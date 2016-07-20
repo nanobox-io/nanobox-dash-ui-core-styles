@@ -36,7 +36,7 @@ $col_width:  ($app_width/$columns);
 
 
 html                                    {background:$dashboard_9;  font-weight:bold;
-  body                                  {@include font-size(12px); width:$app_width; margin:0 auto; font-weight:700; @include antiAlias(); color:$black; background:inherit; padding: 0 0 30px 0;
+  body                                  {font-size: 12px; width:$app_width; margin:0 auto; font-weight:700; @include antiAlias(); color:$black; background:inherit; padding: 0 0 30px 0;
     h1, h2, h3, h4, h5, h6              {display:flex; align-items:center; position:relative; width:100%; margin-bottom:24px; font-weight:normal;}
     h1                                  {@include font-size(21px); }
     h2                                  {@include antiAlias(); @include font-size(19px); display:flex; align-items:baseline; padding-bottom:18px; color:$dashboard_137; border-bottom:1px solid $dashboard_14; font-weight:bold;}
@@ -45,8 +45,8 @@ html                                    {background:$dashboard_9;  font-weight:b
     h5                                  {@include font-size(13px); color:$dashboard_20; }
     h6                                  {@include font-size(12px); margin-bottom:5px; color:$dashboard_15; }
 
-    a                                   {color:$dashboard_77; &:hover {color:$dashboard_73;}}
-
+    // a                                   {color:$dashboard_77; &:hover {color:$dashboard_73;}}
+    a                                   { cursor:pointer; }
     p                                   { @include font-size(14px); margin-bottom:12px; color:$dashboard_23; line-height:28px; }
   }
 }
