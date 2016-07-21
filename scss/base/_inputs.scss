@@ -8,7 +8,7 @@
 
 //
 input                             {@include font-size(15px); @include transition(all, 0.08s); @include placeholderTxtColor($dashboard_9); color:$dashboard_73; height:36px; padding:6px 10px; font-style:italic; background:$white;}
-input[type="submit"]              {cursor:pointer;}
+input[type="submit"]              {font-style:initial; cursor:pointer;}
 
 //
 select                            {height:36px; color:$dashboard_73; background:$white;}
