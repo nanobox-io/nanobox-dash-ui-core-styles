@@ -1,8 +1,8 @@
-// @import "modals/*";
+$modal_index: 100000;
 
-#modalshield              {background:rgba(63, 73, 85, 0.50);}
-#modal                    { @include align('center'); @include font-size(14px); position:fixed; z-index:100000; width:590px; padding:34px 42px 26px; background:$dashboard_5; overflow:hidden; text-align:left;
-  p                       { font-size:16px; color:$dashboard_41; margin-bottom:45px; }
+//
+#modal                    {@include align('center'); @include font-size(14px); position:fixed; z-index:$modal_index; width:590px; padding:34px 42px 26px; background:$dashboard_5; overflow:hidden; text-align:left;
+  p                       {font-size:16px; color:$dashboard_41; margin-bottom:45px; }
   // &:not(.full-height)     { @include align('center'); }
   // &.full-height           { display:block; position:absolute; margin:0 auto; top:10px; bottom:10px; left:0; right:0; }
 
