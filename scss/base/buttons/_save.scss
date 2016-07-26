@@ -1,4 +1,4 @@
-button.save                   {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; width:148px; height:41px; padding:0px 18px; color:$white; background:$dashboard_73;
+button.save                   {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; width:150px; height:40px; padding:0px 18px; color:$white; background:$dashboard_73;
 
   &:after                     {content:'Save Changes'; margin-left:8px;}
 

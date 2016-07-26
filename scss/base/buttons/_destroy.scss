@@ -1,4 +1,4 @@
-button.destroy                {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; width:148px; height:41px; padding:0px 18px; color:$white; background:$dashboard_126;
+button.destroy                {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; width:150px; height:40px; padding:0px 18px; color:$white; background:$dashboard_126;
 
   &:after                     {content:'Destroy'; margin-left:8px;}
 
@@ -25,7 +25,7 @@ button.destroy                {@include transition(background, 0.1s); @include b
   &.removed                   {color:$white; background:$dashboard_127; &:after {content:'Removed';}}
 
   //
-  &.disabled                  {cursor:not-allowed;}
+  &.disabled                  {color:$dashboard_20; background:$dashboard_6; pointer-events:none; cursor:not-allowed;}
 }
 
 //
