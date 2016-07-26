@@ -45,7 +45,7 @@ html                                    {background:$dashboard_9;
     h6                                  {@include font-size(12px); margin-bottom:5px; color:$dashboard_15;}
 
     a                                   {color:#1EB8FF; cursor:pointer; &:hover {color:#0084BF;}}
-    p                                   {@include font-size(14px); margin-bottom:12px; color:$dashboard_23; line-height:28px;}
+    p                                   {@include font-size(14px); margin-bottom:12px; color:$dashboard_23; line-height:28px; strong{color:$dashboard_20;}}
   }
 }
 
