@@ -7,7 +7,7 @@
 }
 
 //
-input                             {@include font-size(15px); @include transition(all, 0.08s); @include placeholderTxtColor($dashboard_9); color:$dashboard_73; height:36px; padding:6px 10px; font-style:italic; background:$white;
+input                             {@include font-size(15px); @include transition(all, 0.08s); @include placeholderTxtColor($dashboard_16); color:$dashboard_73; height:36px; padding:6px 10px; font-style:italic; background:$white;
 
   // the reason we have to do this is because once you apply any style to a select
   // it kills all OS styles and defaults to user agent styles (and we don't want
@@ -29,18 +29,19 @@ select                            {height:36px; }
   // TYPES
 
   // checkboxes
-  &.boolean                       {flex-direction:row; align-items:flex-start; justify-content:space-between;
+  &.boolean                       {flex-direction:row; align-items:flex-start; justify-content:space-between;& > *                         {cursor:pointer;}
+    & > *                         {cursor:pointer;}
     label                         {@include font-size(14px); width:96%; margin:0px; color:$dashboard_42;}
     input                         {height:auto;}
   }
 
   // radio buttons
-  &.radio_buttons                 {flex-direction:row; align-items:flex-start; justify-content:space-between;
+  &.radio_buttons                 {flex-direction:row; align-items:flex-start; justify-content:space-between;& > *                         {cursor:pointer;}
+    & > *                         {cursor:pointer;}
     label                         {@include font-size(14px); margin:0px; color:$dashboard_42;}
     input                         {height:auto;}
   }
 
   // STATES
-  &.disabled                      {input {color:$dashboard_100; background:$dashboard_8;}}
-  &.inactive                      {input {color:$dashboard_23; background:$dashboard_8;}}
+  &.disabled, &.inactive          {input {color:$dashboard_16; background:$dashboard_10;}}
 }

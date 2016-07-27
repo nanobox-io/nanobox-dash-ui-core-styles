@@ -1,5 +1,5 @@
 //
-button, .button       {@include transition(); @include font-size(12px); position:relative; margin:0px; padding:5px; color:$dashboard_73; text-align:left; border:none; background:$white; cursor:pointer;
+button, .button       {@include transition(); @include font-size(12px); position:relative; height:36px; margin:0px; padding:5px; color:$dashboard_73; text-align:left; border:none; background:$white; cursor:pointer;
   &:hover , &:focus   {color:$dashboard_85;}
 
   .label              {@include transition(); @include font-size(inherit); margin:0px; font-family:inherit; color:inherit;}
