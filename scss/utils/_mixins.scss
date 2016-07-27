@@ -33,7 +33,7 @@
 }
 
 //
-@mixin arrow ($direction, $color:red, $scale:1) {
+@mixin arrow ($direction, $color:red, $scale:1, $narrowness:0.5) {
   width: 0;
   height: 0;
   border-style: solid;
