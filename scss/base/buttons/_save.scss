@@ -2,7 +2,6 @@ button.save                   {@include transition(background, 0.1s); @include b
 
   &:after                     {content:'Save Changes'; margin-left:8px;}
 
-  .loader                     {display:none;}
   svg                         {display:block;}
 
   //
@@ -12,7 +11,6 @@ button.save                   {@include transition(background, 0.1s); @include b
   &.creating, &.created,
   &.saving,   &.saved,
   &.submitting, &.submitted   {pointer-events:none;
-    .loader                   {display:block;}
     svg                       {display:none;}
   }
 
