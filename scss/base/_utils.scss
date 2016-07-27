@@ -38,6 +38,6 @@ $shield_index: 10000;
   }
 
   //
-  &.deleting, &.destroying, &.removing {& > * {display:none;} .loader {display:block; border-left:1px solid $dashboard_126;}}
-  &.createing, &.updateing, &.saving, &.submitting {& > * {display:none;} .loader {display:block;}}
+  &.deleting, &.destroying, &.removing {& > * {display:none; pointer-events:none;} .loader {display:block; border-left:1px solid $dashboard_126;}}
+  &.createing, &.updateing, &.saving, &.submitting {& > * {display:none; pointer-events:none;} .loader {display:block;}}
 }
