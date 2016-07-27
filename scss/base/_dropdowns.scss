@@ -8,7 +8,8 @@
 
 $dropHeight: 40px;
 
-#dropshield                     {background:rgba(63, 73, 85, 0);}
+// we want the shield to be clear when using a dropdown
+#dropshield                     {background:rgba(63, 73, 83, 0);}
 
 //
 .dropdown                       {@include font-size(15px, 24px); position:relative; display:flex; align-items:center; justify-content:space-between; height:$dropHeight; padding:0px 10px; text-align:left; color:$dashboard_73; background:$white; cursor:pointer;
@@ -46,7 +47,7 @@ $dropHeight: 40px;
 
   //
   &.open                        {
-    .open-area                  {display:flex; flex-direction:column; z-index:10001;}
+    .open-area                  {display:flex; flex-direction:column; z-index:$shield_index + 1;}
   }
 
   // searchable
