@@ -1,4 +1,4 @@
-button.save                   {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; width:150px; height:40px; padding:0px 18px; color:$white; background:$dashboard_73;
+button.save                   {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; min-width:135px; padding:0px 15px; color:$white; background:$dashboard_73;
 
   &:after                     {content:'Save Changes'; margin-left:8px;}
 
@@ -27,7 +27,7 @@ button.save                   {@include transition(background, 0.1s); @include b
 .save-zone                    {display:flex; align-items:center; justify-content:flex-end; margin-left:auto; margin-top:12px;
 
   //
-  .cancel                     {@include border-radius; @include font-size(12px); @include transition(all, 0); display:inline-block; width:86px; height:41px; margin-right:7px; padding:15px 0px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
+  .cancel                     {@include border-radius; @include font-size(12px); @include transition(all, 0); display:flex; align-items:center; height:36px; margin-right:8px; padding:0px 15px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
     &:hover                   {background: white;}
   }
 
