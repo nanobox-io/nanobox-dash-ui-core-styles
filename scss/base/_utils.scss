@@ -3,7 +3,7 @@ $shield_index: 10000;
 .shield {position:fixed; top:0px; left:0px; z-index:$shield_index; width:100%; height:100%; background:rgba(63, 73, 83, 0.50); cursor:pointer;}
 
 //
-.lifecycle {
+.lifecycle-action {
 
   // loader
   .loader {
@@ -38,6 +38,6 @@ $shield_index: 10000;
   }
 
   //
-  &.deleting, &.destroying, &.removing {& > * {display:none; pointer-events:none;} .loader {display:block; border-left:1px solid $dashboard_126;}}
-  &.createing, &.updateing, &.saving, &.submitting {& > * {display:none; pointer-events:none;} .loader {display:block;}}
+  &.delete.ing, &.destroy.ing, &.remove.ing {& > * {display:none; pointer-events:none;} .loader {display:block; border-left:1px solid $dashboard_126;}}
+  &.create.ing, &.update.ing, &.save.ing, &.submit.ing {& > * {display:none; pointer-events:none;} .loader {display:block;}}
 }
