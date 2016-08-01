@@ -38,7 +38,7 @@ html                                    {background:$dashboard_9;
   body                                  {@include antiAlias(); width:$app_width; margin:0 auto; padding: 0 0 60px 0; font-size: 12px; font-weight:700; color:$black; background:inherit;
     h1, h2, h3, h4, h5, h6              {display:flex; align-items:center; position:relative; width:100%; margin-bottom:24px; font-weight:normal;}
     h1                                  {@include font-size(21px);}
-    h2                                  {@include antiAlias(); @include font-size(19px); display:flex; align-items:baseline; padding-bottom:18px; color:$dashboard_137; border-bottom:1px solid $dashboard_14; font-weight:bold;}
+    h2                                  {@include antiAlias(); @include font-size(14px); display:flex; align-items:baseline; padding-bottom:18px; color:#3F5F6B; border-bottom:1px solid $dashboard_14; font-weight:bold; text-transform: uppercase; letter-spacing: 0.04em;}
     h3                                  {@include font-size(16px); padding-bottom:18px; color:$dashboard_27; border-bottom:1px solid $dashboard_14;}
     h4                                  {@include font-size(14px);}
     h5                                  {@include font-size(13px); color:$dashboard_20;}
@@ -46,6 +46,10 @@ html                                    {background:$dashboard_9;
 
     a                                   {color:#1EB8FF; cursor:pointer; &:hover {color:#0084BF;}}
     p                                   {@include font-size(14px, 24px); margin-bottom:12px; color:$dashboard_23; strong{color:$dashboard_20;}}
+    .help-txt                           {color:#A3B4C2; font-size:15px; line-height: 1.5; font-style:italic;
+      &.main                            {margin-bottom: 30px;}
+      &.small                           {font-size:14px;}
+    }
   }
 }
 

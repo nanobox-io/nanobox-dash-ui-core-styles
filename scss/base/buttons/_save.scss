@@ -1,11 +1,15 @@
-button.save                   {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; min-width:135px; padding:0px 15px; color:$white; background:$dashboard_73;
+button.save                   {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; min-width:135px; padding:0px 15px; color:$white; background:#4B6373; height:40px;
 
   &:after                     {content:'Save Changes'; margin-left:8px;}
 
-  svg                         {display:block;}
+  svg                         {display:block;
+    path                      {fill:#01EFBC;}
+  }
 
   //
-  &:hover                     {color:$dashboard_73; background:$white; svg {path {fill:$dashboard_73;}}}
+  &:hover                     {color:#01EFBC; background:#1C3444;
+    svg                       {path {fill:white;}}
+  }
 
   // display
   &.creating, &.created,
@@ -25,7 +29,7 @@ button.save                   {@include transition(background, 0.1s); @include b
 .save-zone                    {display:flex; align-items:center; justify-content:flex-end; margin-left:auto; margin-top:12px;
 
   //
-  .cancel                     {@include border-radius; @include font-size(12px); @include transition(all, 0); display:flex; align-items:center; height:36px; margin-right:8px; padding:0px 15px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
+  .cancel                     {@include border-radius; @include font-size(13px); @include transition(all, 0); display:flex; align-items:center; height:40px; margin-right:8px; padding:0px 25px; color:#4B6373; text-align:center; background:#D3DDE3; cursor:pointer;
     &:hover                   {background: white;}
   }
 
