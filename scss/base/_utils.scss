@@ -5,6 +5,12 @@ $shield_index: 10000;
 //
 .lifecycle-action {
 
+  //
+  $default:   white;
+  $blue:      $azul;
+  $green:     #01EFBC;
+  $red:       #f58397;
+
   // loader
   .loader {
     display:none; // disabled by default
@@ -14,7 +20,7 @@ $shield_index: 10000;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid #ffffff;
+    border-left: 1px solid $default;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
@@ -38,6 +44,6 @@ $shield_index: 10000;
   }
 
   //
-  &.delete.ing, &.destroy.ing, &.remove.ing {& > * {display:none; pointer-events:none;} .loader {display:block; border-left:1px solid $dashboard_126;}}
+  &.delete.ing, &.destroy.ing, &.remove.ing {& > * {display:none; pointer-events:none;} .loader {display:block; border-left:1px solid $red;}}
   &.create.ing, &.update.ing, &.save.ing, &.submit.ing {& > * {display:none; pointer-events:none;} .loader {display:block;}}
 }

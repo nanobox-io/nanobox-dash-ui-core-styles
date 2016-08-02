@@ -19,6 +19,10 @@ form                        {display:flex; flex-direction:column; width:100%;
       }
     }
   }
+
+  // dirty/clean handling
+  button.save, .save-zone   {@include transition(opacity, 0.15s); opacity:0;}
+  &.dirty                   {button.save, .save-zone{opacity:1;}}
 }
 
 //

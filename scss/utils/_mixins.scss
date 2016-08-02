@@ -83,7 +83,7 @@
 }
 
 //
-@mixin transition ($property:all, $duration:0.05s, $timing:linear, $delay:0s) {
+@mixin transition ($property:all, $duration:0.05s, $timing:ease-in-out, $delay:0s) {
   @if $property != none {
     -webkit-transition: $property $duration $timing $delay;
     -moz-transition: $property $duration $timing $delay;
