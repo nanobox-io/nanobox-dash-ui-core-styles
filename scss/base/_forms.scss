@@ -1,33 +1,35 @@
 
 //
-form                        {display:flex; flex-direction:column; width:100%;
-  .row                      {display:flex; align-items:center; justify-content:space-between; width:100%; margin:0px 0px; padding:0px;
+form                          {display:flex; flex-direction:column; width:100%;
+  .row                        {display:flex; align-items:center; justify-content:space-between; width:100%; margin:0px 0px; padding:0px;
 
-    &:not(:last-child)      {margin-bottom:25px;}
+    &:not(:last-child)        {margin-bottom:25px;}
 
     //
-    .label                  {@include font-size(13px); margin-bottom:5px; color:$dashboard_20;
-      label                 {color:inherit;}
+    .label                    {@include font-size(13px); margin-bottom:5px; color:$dashboard_20;
+      label                   {color:inherit;}
     }
 
     //
-    .input                  {flex:1 1 100%;
-      &:not(:last-child)    {margin-right:15px;}
+    .input                    {flex:1 1 100%;
+      &:not(:last-child)      {margin-right:15px;}
 
-      &.field_with_errors   {
-        input               {border:1px solid $dashboard_126; background:#ffe6e6;}
+      &.field_with_errors     {
+        input                 {border:1px solid $dashboard_126; background:#ffe6e6;}
       }
     }
   }
 
   // dirty/clean handling
-  button.save, .save-zone   {@include transition(opacity, 0.15s); opacity:0;}
-  &.dirty                   {button.save, .save-zone{opacity:1;}}
+  &:not(.nodirrty)            {
+    button.save, .save-zone   {@include transition(opacity, 0.15s); opacity:0; pointer-events:none;}
+    &.dirty                   {button.save, .save-zone{opacity:1; pointer-events:initial;}}
+  }
 }
 
 //
-#errors                     {@include border-radius(5px, 5px, 5px, 5px); width:100%; margin-bottom:18px; padding:18px; border:2px solid $dashboard_126; background:$white;
-  .error                    {@include font-size(14px); position:relative; padding-left:15px; color:$dashboard_126;
-    &:before                {@include arrow("right", $dashboard_126, 0.25); content:""; position:absolute; top:-1px; left:-10px;}
+#errors                       {@include border-radius(5px, 5px, 5px, 5px); width:100%; margin-bottom:18px; padding:18px; border:2px solid $dashboard_126; background:$white;
+  .error                      {@include font-size(14px); position:relative; padding-left:15px; color:$dashboard_126;
+    &:before                  {@include arrow("right", $dashboard_126, 0.25); content:""; position:absolute; top:-1px; left:-10px;}
   }
 }

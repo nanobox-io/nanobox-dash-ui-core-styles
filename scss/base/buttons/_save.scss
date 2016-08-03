@@ -1,42 +1,39 @@
-button.save                   {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; min-width:135px; padding:0px 15px; color:$white; background:#4B6373; height:40px;
+// button.save styles; these styles should be independent of the location of the
+// save button.
+button.save             {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; min-width:135px; padding:0px 15px; color:$white; background:#4B6373; height:40px;
 
-  &:after                     {content:'Save Changes'; margin-left:8px;}
+  // this is the default content for the button, if this needs to be changed it
+  // should be handled on a per button basis as its probably based entirely off
+  // of context
+  &:after               {content:'Save Changes'; margin-left:8px;}
 
-  svg                         {display:block;
-    path                      {fill:#01EFBC;}
-  }
+  #check-mark           {display:block; path {fill:#01EFBC;}}
 
   //
-  &:hover                     {color:#1FF6C8; background:#1C3444;
-    svg                       {path {fill:white;}}
-  }
+  &:hover               {color:#1FF6C8; background:#1C3444; #check-mark {path {fill:white;}}}
 
   // display
-  &.creating, &.created,
-  &.saving,   &.saved,
-  &.submitting, &.submitted   {pointer-events:none;
-    svg                       {display:none;}
-  }
+  // &.disabled            {}
+}
 
-  // content
-  &.creating, &.saving        {color:$white; background:$dashboard_92; &:after {content:'Saving...';}}
-  &.created, &.saved          {color:$white; background:$dashboard_106; &:after {content:'Saved';}}
-  &.submitting                {color:$white; background:$dashboard_106; &:after {content:'Submitting...';}}
-  &.submitted                 {color:$white; background:$dashboard_106; &:after {content:'Submitted';}}
+// these styles control the look of the save-zone and anything inside of it;
+// these styles should be independant of the location of the save-zone
+.save-zone              {display:flex; align-items:center; justify-content:flex-end; margin-left:auto; margin-top:12px;
+  .cancel               {@include border-radius; @include font-size(13px); @include transition(all, 0); display:flex; align-items:center; height:40px; margin-right:8px; padding:0px 25px; color:#4B6373; text-align:center; background:#D3DDE3; cursor:pointer;
+    &:hover             {background: white;}
+  }
 }
 
 //
-.save-zone                    {display:flex; align-items:center; justify-content:flex-end; margin-left:auto; margin-top:12px;
+form                      {
 
   //
-  .cancel                     {@include border-radius; @include font-size(13px); @include transition(all, 0); display:flex; align-items:center; height:40px; margin-right:8px; padding:0px 25px; color:#4B6373; text-align:center; background:#D3DDE3; cursor:pointer;
-    &:hover                   {background: white;}
-  }
-
-  //
-  &.creating,   &.created,
-  &.saving,     &.saved,
-  &.submitting, &.submitted   {
-    .cancel                   {display:none;}
+  &.submitting            {
+    .save-zone            {
+      button.save.ing     {color:$white; background:$dashboard_92; pointer-events:none; &:after {content:'Saving...';}
+        #check-mark       {display:none;}
+      }
+      .cancel             {display:none;}
+    }
   }
 }

@@ -1,0 +1,35 @@
+// button.delete styles; these styles should be independent of the location of
+// the delete button.
+button.delete            {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; min-width:135px; padding:0px 15px; color:$white; background:$dashboard_126;
+
+  // this is the default content for the button, if this needs to be changed it
+  // should be handled on a per button basis as its probably based entirely off
+  // of context
+  &:after                 {content:"Delete"; margin-left:3px;}
+
+  //
+  &:hover                 {color:$dashboard_126; background:$white; svg {path {fill:$dashboard_126;}}}
+
+  // display
+  &.disabled              {color:$dashboard_20; background:$dashboard_6; pointer-events:none; cursor:not-allowed;}
+}
+
+// these styles control the look of the delete-zone and anything inside of it;
+// these styles should be independant of the location of the delete-zone
+.delete-zone              {display:flex; align-items:center; justify-content:flex-end; margin-left:auto; margin-top:12px;
+  .cancel                 {@include border-radius; @include font-size(12px); @include transition(all, 0); display:flex; align-items:center; height:36px; margin-right:8px; padding:0px 15px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
+    &:hover               {background: white;}
+  }
+}
+
+//
+form                      {
+
+  //
+  &.submitting            {
+    .delete-zone          {
+      button.delete.ing   {color:$white; background:$dashboard_92; pointer-events:none; &:after {content:'Deleting...';}}
+      .cancel             {display:none;}
+    }
+  }
+}
