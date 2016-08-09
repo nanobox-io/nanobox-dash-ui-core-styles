@@ -11,7 +11,7 @@ $col_width:  ($app_width/$columns);
 .row                                    {width:100%;}
 
 //
-.columns                                {
+.columns                                {display:flex; flex-direction:column;
 
   &.one                                 {width:((1*$col_width) - $col_gutter);}
   &.two                                 {width:((2*$col_width) - $col_gutter);}
