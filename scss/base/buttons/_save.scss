@@ -12,8 +12,13 @@ button.save             {@include transition(background, 0.1s); @include border-
   //
   &:hover               {color:#1FF6C8; background:#1C3444; #check-mark {path {fill:white;}}}
 
+  //
+  &.ing                 {color:$white; background:$dashboard_92; pointer-events:none; &:after {content:'Saving...';}
+    #check-mark         {display:none;}
+  }
+
   // display
-  // &.disabled            {}
+  &.disabled            {color:$dashboard_20; background:$dashboard_6; pointer-events:none; cursor:not-allowed;}
 }
 
 // these styles control the look of the save-zone and anything inside of it;
@@ -22,18 +27,7 @@ button.save             {@include transition(background, 0.1s); @include border-
   .cancel               {@include border-radius; @include font-size(13px); @include transition(all, 0); display:flex; align-items:center; height:40px; margin-right:8px; padding:0px 25px; color:#4B6373; text-align:center; background:#D3DDE3; cursor:pointer;
     &:hover             {background: white;}
   }
-}
 
-//
-form                      {
-
-  //
-  &.submitting            {
-    .save-zone            {
-      button.save.ing     {color:$white; background:$dashboard_92; pointer-events:none; &:after {content:'Saving...';}
-        #check-mark       {display:none;}
-      }
-      .cancel             {display:none;}
-    }
-  }
+  // 
+  &.saving              {.save-zone {.cancel {display:none;}}}
 }

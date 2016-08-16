@@ -2,9 +2,10 @@
 .lifecycle {
 
   // loader
-  .loader {
+  &:before {
     display:none; // disabled by default
 
+    content:"";
     font-size: 0px;
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -19,36 +20,27 @@
   }
 
   //
-  .loader, .loader:after {border-radius: 50%; width: 20px; height: 20px;}
+  &:before  {border-radius: 50%; width: 20px; height: 20px;}
 
   //
   @-webkit-keyframes loaderanim {
-    0%    {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
-    100%  {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+    0%          {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+    100%        {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
   }
 
   //
   @keyframes loaderanim {
-    0%    {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
-    100%  {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+    0%          {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+    100%        {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
   }
+
+  //
+  &.ing         {&:before {display:block;}}
 }
 
 // general lifecycle styles of anchor tags; specifics like color need to be handled
 // on a contextual level
-a.lifecycle               {
-  &.ing                   {& > * {display:none;} .loader {display:block;}}
-
-  //
-  &.delete               {.loader {border-left: 1px solid #f58397;}}
-}
-
-// general lifecycle styles of a form and containing elements; specifics like
-// color need to be handled on a contextual level
-form                      {
-
-  //
-  &.submitting            {
-    button.lifecycle.ing  {.loader {display:block;}}
-  }
+a.lifecycle     {
+  &.ing         {& > * {display:none;} &:before {display:block;}}
+  &.delete      {&:before {border-left: 1px solid #f58397;}}
 }

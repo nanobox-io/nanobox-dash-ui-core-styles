@@ -11,6 +11,7 @@ button.delete            {@include transition(background, 0.1s); @include border
   &:hover                 {color:$dashboard_126; background:$white; svg {path {fill:$dashboard_126;}}}
 
   // display
+  &.ing                   {color:$white; background:$dashboard_92; pointer-events:none; &:after {content:'Deleting...';}}
   &.disabled              {color:$dashboard_20; background:$dashboard_6; pointer-events:none; cursor:not-allowed;}
 }
 
@@ -20,16 +21,7 @@ button.delete            {@include transition(background, 0.1s); @include border
   .cancel                 {@include border-radius; @include font-size(12px); @include transition(all, 0); display:flex; align-items:center; height:36px; margin-right:8px; padding:0px 15px; color:$dashboard_78; text-align:center; background:$dashboard_11; cursor:pointer;
     &:hover               {background: white;}
   }
-}
 
-//
-form                      {
-
-  //
-  &.submitting            {
-    .delete-zone          {
-      button.delete.ing   {color:$white; background:$dashboard_92; pointer-events:none; &:after {content:'Deleting...';}}
-      .cancel             {display:none;}
-    }
-  }
+  // 
+  &.deleting              {.delete-zone {.cancel {display:none;}}}
 }
