@@ -35,9 +35,7 @@
   }
 
   //
-  &.ing         {pointer-events: none;
-    &:before    {display:block;}
-  }
+  &.ing         {pointer-events: none; &:before {display:block;}}
 }
 
 // general lifecycle styles of anchor tags; specifics like color need to be handled
