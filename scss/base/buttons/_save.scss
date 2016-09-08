@@ -5,9 +5,9 @@ button.save             {@include transition(background, 0.1s); @include border-
   // this is the default content for the button, if this needs to be changed it
   // should be handled on a per button basis as its probably based entirely off
   // of context
-  &:after               {content:'Save Changes'; margin-left:8px;}
+  &:after               {content:'Save Changes';}
 
-  #check-mark           {display:block; path {fill:#01EFBC;}}
+  #check-mark           {display:block; margin-right:8px; path {fill:#01EFBC;}}
 
   //
   &:hover               {color:#1FF6C8; background:#1C3444; #check-mark {path {fill:white;}}}
@@ -28,6 +28,6 @@ button.save             {@include transition(background, 0.1s); @include border-
     &:hover             {background: white;}
   }
 
-  // 
+  //
   &.saving              {.save-zone {.cancel {display:none;}}}
 }

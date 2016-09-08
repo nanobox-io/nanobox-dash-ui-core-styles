@@ -5,7 +5,7 @@ button.delete            {@include transition(background, 0.1s); @include border
   // this is the default content for the button, if this needs to be changed it
   // should be handled on a per button basis as its probably based entirely off
   // of context
-  &:after                 {content:"Delete"; margin-left:3px;}
+  &:after                 {content:"Delete";}
 
   //
   &:hover                 {color:$dashboard_126; background:$white; svg {path {fill:$dashboard_126;}}}
@@ -22,6 +22,6 @@ button.delete            {@include transition(background, 0.1s); @include border
     &:hover               {background: white;}
   }
 
-  // 
+  //
   &.deleting              {.delete-zone {.cancel {display:none;}}}
 }
