@@ -7,7 +7,8 @@
 }
 
 //
-input                             {@include font-size(17px); @include transition(all, 0.08s); @include placeholderTxtColor($dashboard_16); color:#487382; height:45px; padding:6px 10px; font-style:italic; background:$white;
+input{font-size:17px;
+  &:not([type="radio"])  {@include transition(all, 0.08s); @include placeholderTxtColor($dashboard_16); color:#487382; height:45px; padding:6px 10px; font-style:italic; background:$white;}
 
   // the reason we have to do this is because once you apply any style to a select
   // it kills all OS styles and defaults to user agent styles (and we don't want
