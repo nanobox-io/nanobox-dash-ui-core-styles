@@ -1,20 +1,29 @@
-$olark-blue: #48B5DA;
-$olark-grey-lt: #f3f3f3;
+$olark-blue                                        : #00aef7;
+$olark-bg-gray                                     : #88959F;
+$olark-bg-gray-dark                                : #485C6B;
+$olark-bg-gray-darker                              : #273B4A;
+$olark-grey-lt                                     : #f3f3f3;
 
 // Olark Styles
 #habla_panel_div                { font-size: 16px !important; }
-#habla_topbar_div               { background-color: $olark-blue !important; border-radius: 3px 3px 0 0 !important;
+#habla_topbar_div               { background-color: $olark-bg-gray !important; border-radius: 0px !important;
   #habla_oplink_a:hover         { text-decoration: none !important; }
 }
-#habla_window_div               { border-radius: 4px 4px 0 0 !important; font-family: "proxima-nova" !important;
-  #habla_pre_chat_div           { margin: 0 -10px !important; }
-  #habla_middle_div + div       { display: none; }
-  #habla_input_div              { margin: 7px -10px 6px!important; }
-  #habla_pre_chat_submit_input  { background-color: $olark-blue !important; width: 100%; text-align: center; box-sizing: border-box; padding: 8px; border-radius: 3px; font-size: 1em; }
+
+#habla_expanded_div{  border: solid #88959f 7px !important;}
+
+#habla_window_div                        {border-radius: 0 !important; font-family: "proxima-nova" !important;   font-weight: $medium;
+  #habla_pre_chat_div                    {margin: 0 -10px !important; }
+  #habla_middle_div + div                {display: none; }
+  #habla_input_div                       {margin: 7px -10px 6px!important; }
+  #habla_pre_chat_submit_input           {background-color: $olark-blue !important; width: 100%; text-align: center; box-sizing: border-box; padding: 8px; border-radius: 3px; font-size: 1em; }
   #habla_pre_chat_name_input,
-  #habla_pre_chat_email_input   { font-size: 1em !important; }
-  #habla_pre_chat_error_span:not(:empty) { padding: 10px; line-height: 1.2em !important; font-style: normal !important; font-size: .9em; }
-  .hbl_txt_wrapper              { overflow: hidden; }
-  .habla_button:hover           { background-color: $olark-blue !important; }
-  textarea                      { border-radius: 0 !important; border: none !important; background-color: $olark-grey-lt !important; box-sizing: border-box !important; min-height: 40px !important; padding: 10px !important; }
+  #habla_pre_chat_email_input            {font-size: 1em !important; }
+  #habla_pre_chat_error_span:not(:empty) {padding: 10px; line-height: 1.2em !important; font-style: normal !important; font-size: .9em; }
+  #habla_wcsend_input                    {box-shadow: none; }
+  .habla_conversation_person2            {font-style:italic; color:$olark-bg-gray-dark !important; }
+  .habla_conversation_text_span          {color:$olark-bg-gray-darker; font-weight: $semibold;  }
+  .hbl_txt_wrapper                       {overflow: hidden; }
+  .habla_button:hover                    {background-color: #485C6B !important; }
+  textarea                               {border-radius: 0 !important; border: none !important; background-color: $olark-grey-lt !important; box-sizing: border-box !important; min-height: 40px !important; padding: 10px !important; }
 }
