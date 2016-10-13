@@ -1,0 +1,14 @@
+$grv-blue: #48B5DA;
+
+//
+iframe.grv-widget-tag     {display:none;}
+iframe.grv-widget-app     {display:block !important;}
+
+//
+#groove-feedback          { box-shadow: none !important; font-family: 'proxima-nova' !important;
+  #groove-button          { padding: 4px 14px !important; background: $grv-blue !important; font-size: 16px !important; font-weight: normal !important; }
+  #gw-back-button.visible { display: none !important; }
+
+  // Because the Groove widget/form is loaded in an iFrame, most of the styles
+  // are handled through the Groove dashboard.
+}
