@@ -14,6 +14,7 @@ $olark-grey-lt                                     : #f3f3f3;
 
 #habla_window_div                        {border-radius: 0 !important; font-family: "proxima-nova" !important;   font-weight: $medium;
 #hbl_body_message                        {font-weight:$medium; color:$olark-bg-gray-darker; }
+  #habla_panel_div                       {border-radius: 0 !important;}
   #habla_pre_chat_span                   {line-height: 1.2; margin: 4px 0 15px !important; font-style: italic; color: $olark-bg-gray; font-weight: 600; font-size: 15px;}
   #habla_pre_chat_div                    {margin: 0 -10px !important; }
   #habla_middle_div + div                {display: none; }
