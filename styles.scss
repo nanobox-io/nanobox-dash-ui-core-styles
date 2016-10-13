@@ -6,3 +6,7 @@
 
 // Import any styles that will be shared across all libs & the dashboard
 @import "scss/base";
+
+// Import any vendor styles that are shared across all libs & the dashboard
+// groove, olark, etc
+@import "scss/vendor";
