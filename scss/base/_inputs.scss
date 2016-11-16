@@ -1,50 +1,50 @@
 //
-@mixin placeholderTxtColor($color) {
-  &::-webkit-input-placeholder  {color: $color}
-  &:-moz-placeholder            {color: $color}
-  &:-ms-input-placeholder       {color: $color}
-  &::-moz-placeholder           {color: $color}
+@mixin placeholderTxtColor($color)  {
+  &::-webkit-input-placeholder      {color: $color}
+  &:-moz-placeholder                {color: $color}
+  &:-ms-input-placeholder           {color: $color}
+  &::-moz-placeholder               {color: $color}
 }
 
 //
-input{font-size:17px;
-  &:not([type="radio"])  {@include transition(all, 0.08s); @include placeholderTxtColor($dashboard_16); color:#487382; height:45px; padding:6px 10px; font-style:italic; background:$white;}
+input                               {@include font-size(17px);
+  &:not([type="radio"])             {@include transition(all, 0.08s); @include placeholderTxtColor($dashboard_16); color:#487382; height:45px; padding:6px 10px; font-style:italic; background:$white;}
 
   // the reason we have to do this is because once you apply any style to a select
   // it kills all OS styles and defaults to user agent styles (and we don't want
   // that)
-  &:not([type="select"])          {border:none;}
+  &:not([type="select"])            {border:none;}
 }
-input[type="submit"]              {font-style:initial; cursor:pointer;}
+input[type="submit"]                {font-style:initial; cursor:pointer;}
 
 //
-select                            {height:36px; }
+select                              {height:36px; }
 
 
 //
-.input                            {@include font-size(15px); display:flex; flex-direction:column; width:100%; color:$dashboard_100;
+.input                              {@include font-size(15px); display:flex; flex-direction:column; width:100%; color:$dashboard_100;
 
   //
-  label                           {@include font-size(13px); margin-bottom:5px; color:#A3B4C2;}
+  label                             {@include font-size(13px); margin-bottom:5px; color:#A3B4C2;}
 
   // TYPES
 
   // checkboxes
-  &.boolean                       {flex-direction:row; align-items:flex-start; justify-content:space-between;& > *                         {cursor:pointer;}
-    & > *                         {cursor:pointer;}
-    label                         {@include font-size(14px); width:96%; margin:0px; color:$dashboard_42;}
-    input                         {height:auto;}
+  &.boolean                         {flex-direction:row; align-items:flex-start; justify-content:space-between;& > *                         {cursor:pointer;}
+    & > *                           {cursor:pointer;}
+    label                           {@include font-size(14px); width:96%; margin:0px; color:$dashboard_42;}
+    input                           {height:auto;}
   }
 
   // radio buttons
-  &.radio_buttons                 {flex-direction:row; align-items:flex-start; justify-content:space-between;& > *                         {cursor:pointer;}
-    & > *                         {cursor:pointer;}
-    label                         {@include font-size(14px); margin:0px; color:$dashboard_42;}
-    input                         {height:auto;}
+  &.radio_buttons                   {flex-direction:row; align-items:flex-start; justify-content:space-between;& > *                         {cursor:pointer;}
+    & > *                           {cursor:pointer;}
+    label                           {@include font-size(14px); margin:0px; color:$dashboard_42;}
+    input                           {height:auto;}
   }
 
   // STATES
-  &.disabled, &.inactive          {input { background:#DCE3E8;}}
+  &.disabled, &.inactive            {input {background:#DCE3E8;}}
 }
 
-textarea                          {border:none;}
+textarea                            {border:none;}
