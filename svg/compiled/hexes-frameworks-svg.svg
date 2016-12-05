@@ -51,9 +51,12 @@
 	.st45{fill:none;stroke:#DEDEDE;stroke-width:0.6668;stroke-miterlimit:10;}
 	.st46{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
 	.st47{fill:url(#SVGID_1_);}
-	.st48{fill:#FFC29E;}
+	.st48{fill:#FFCDAB;}
 	.st49{fill:#E0564E;}
 	.st50{fill:#E86B64;}
+	.st51{fill:#4AB77E;}
+	.st52{fill:#354960;}
+	.st53{fill:#338C66;}
 </style>
 <g id="hex-sinatra_x60_46x54">
 	<polygon class="st0" points="45.998,39.766 22.999,53.065 0,39.766 0,13.298 22.999,0 45.998,13.298 	"/>
@@ -385,5 +388,11 @@
 	<polygon class="st49" points="23.287,13.728 22.647,13.728 22.647,0.184 22.965,0 23.287,0.186 	"/>
 	<polyline class="st49" points="26.633,15.56 26.633,18.661 19.347,18.661 19.347,15.56 	"/>
 	<path class="st50" d="M18.564,34.366"/>
+</g>
+<g id="hex-vue_x60_47x54">
+	<polygon class="st51" points="46.313,40.11 23.153,53.481 0,40.11 0,13.37 23.153,0 46.313,13.37 	"/>
+	<polygon class="st8" points="8.741,17.028 14.51,17.028 23.179,31.914 31.881,17.028 37.572,17.028 23.179,41.897 	"/>
+	<polygon class="st52" points="14.536,17.028 19.91,17.028 23.173,22.817 26.591,17.028 31.881,17.028 23.173,31.901 	"/>
+	<polyline class="st53" points="23.179,41.891 29.168,49.725 46.313,40.11 46.164,27.55 37.572,17.028 	"/>
 </g>
 </svg>
