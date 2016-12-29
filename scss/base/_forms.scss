@@ -3,7 +3,8 @@
 form                          {display:flex; flex-direction:column; width:100%;
 
   //
-  .label                      {@include font-size(13px); margin-bottom:5px; color:$dashboard_20;
+  .label                      {@include font-size(13px); color:$dashboard_20;
+    &:not(&.boolean)          {margin-bottom:5px;}
     label                     {color:inherit;}
   }
 
