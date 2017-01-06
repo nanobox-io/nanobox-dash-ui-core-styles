@@ -20,27 +20,6 @@ $success-green : #00B463;
     }
   }
   .save-section       {display: flex; align-items: center; justify-content: flex-end; font-size:14px; font-style:italic; margin-top:10px;
-    .delete           {position: relative; display:flex; margin-right:auto; color:#F27E8F; align-items: center; cursor:pointer;
-      svg path        {fill:#F27E8F; }
-      .txt            {margin-left:10px; padding:10px 20px 10px 10px; }
-      &:hover         {
-        svg path      {fill:#DE314A;}
-        .txt          {color:#DE314A;}
-      }
-      &.confirm       {background: #F27E8F;
-        svg           {margin-left:10px;
-          path        {fill:white}
-        }
-        .txt          { color:white; margin-left:0; }
-        &:after       {position: absolute; left:100%; white-space: nowrap; content:"Are you sure? This cannot be undone!"; margin-left:10px; pointer-events: none; }
-        &:hover       {background:#DE314A;}
-      }
-    }
-    .cancel           {color:#09A6EC; margin-right:30px; cursor:pointer; }
-    .button           {background: #09A6EC; color:white; font-size:14px; padding:0 20px;
-      &.success       {pointer-events: none; color:$success-green; background:white; }
-      &.disabled      {opacity:0.3; cursor:not-allowed; pointer-events: none;}
-    }
   }
   .sub-items          {margin-top:20px;
     h2                {margin-bottom:35px; }
@@ -53,4 +32,27 @@ $success-green : #00B463;
       }
     }
   }
+}
+
+.delete           {position: relative; display:flex; margin-right:auto; color:#F27E8F; align-items: center; cursor:pointer;
+  &:after         {position: absolute; left:100%; white-space: nowrap; content:""; margin-left:10px; pointer-events: none; }
+  svg path        {fill:#F27E8F; }
+  .txt            {margin-left:10px; padding:10px 20px 10px 10px; }
+  &:hover         {
+    svg path      {fill:#DE314A;}
+    .txt          {color:#DE314A;}
+  }
+  &.confirm       {background: #F27E8F;
+    svg           {margin-left:10px;
+      path        {fill:white}
+    }
+    .txt          { color:white; margin-left:0; }
+    &:after       {content:"Are you sure? This cannot be undone!"; }
+    &:hover       {background:#DE314A;}
+  }
+}
+.cancel           {color:#09A6EC; margin-right:30px; cursor:pointer; }
+.button           {background: #09A6EC; color:white; font-size:14px; padding:0 20px; display:inline-flex; font-style:italic;
+  &.success       {pointer-events: none; color:$success-green; background:white; }
+  &.disabled      {opacity:0.3; cursor:not-allowed; pointer-events: none;}
 }
