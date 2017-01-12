@@ -23,7 +23,7 @@ $success-green : #00B463;
   }
   .sub-items          {margin-top:20px;
     h2                {margin-bottom:35px; }
-    .item             {display: flex; color:#034C66; font-size:14px; align-items: center; border-bottom: 1px solid #D1DCDF; padding:15px 0;
+    .item             {display: flex; color:#034C66; font-size:14px; align-items: center; border-bottom: 1px solid #D1DCDF; padding:15px 0; font-style:italic; color:#7C7C7C;
       &:last-of-type  {border:none; }
       .name           {}
       a               {padding:0 12px;
