@@ -1,0 +1,23 @@
+$blue : #0072C3;
+$btn-height:40px;
+$btn-color:#00ADFE;
+
+.arrow-button {position: relative; background: $btn-color; height:$btn-height; display: inline-flex; align-items: center; padding:0 20px; font-style:italic; color:white; font-weight:$semibold; cursor:pointer;  font-style: italic; font-size: 16px;
+  &:after     {position:absolute; top:0; right:(-$btn-height/2 * 0.65) + 1; content:" "; width: 0px; height: 0px; border-style: solid; border-width: $btn-height/2 0 $btn-height/2 $btn-height/2 * 0.65; border-color: transparent transparent transparent $btn-color; }
+  &:hover     {background: #008BCC;
+    &:after   {border-left-color:#008BCC;}
+  }
+  &.no-arrow{
+    &:after {display: none; }
+  }
+  &.disabled  {pointer-events: none; opacity: 0.4; //background:#8E9BA1;
+    // Not working in chrome for some reason... try at a later date
+    // &:after   {border-left-color:#008BCC;}
+  }
+}
+.arrow-btn  {position:relative; display: flex; cursor: pointer; width:95px;
+  &:after   {content: "Next"; color: white; font-style:italic; position: absolute; left:45%; transform: translate(-50%, 0); top:10px; font-size:16px}
+  svg       {
+    polygon {fill: $azul2; }
+  }
+}

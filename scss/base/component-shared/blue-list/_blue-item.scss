@@ -19,8 +19,7 @@ $success-green : #00B463;
       }
     }
   }
-  .save-section       {display: flex; align-items: center; justify-content: flex-end; font-size:14px; font-style:italic; margin-top:10px;
-  }
+  .save-section       {display: flex; align-items: center; justify-content: flex-end; font-size:14px; font-style:italic; margin-top:10px;}
   .sub-items          {margin-top:20px;
     h2                {margin-bottom:35px; }
     .item             {display: flex; color:#034C66; font-size:14px; align-items: center; border-bottom: 1px solid #D1DCDF; padding:15px 0; font-style:italic; color:#7C7C7C;
@@ -51,7 +50,6 @@ $success-green : #00B463;
     &:hover       {background:#DE314A;}
   }
 }
-.cancel           {color:#09A6EC; margin-right:30px; cursor:pointer; }
 .button           {background: #09A6EC; color:white; font-size:14px; padding:0 20px; display:inline-flex; font-style:italic;
   &.success       {pointer-events: none; color:$success-green; background:white; }
   &.disabled      {opacity:0.3; cursor:not-allowed; pointer-events: none;}

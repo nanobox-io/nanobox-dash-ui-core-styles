@@ -64,7 +64,6 @@ body {font-family: $proxima;
 @import 'base/inputs';
 @import 'base/steps/steps';
 @import 'base/lifecycle';
-@import 'base/blue-list/blue-list';
-@import 'base/blue-list/blue-item';
+@import 'base/component-shared';
 
 .temp-test-red{background:red !important; }
