@@ -12,6 +12,10 @@
     &.cancel    {display:flex; }
     &.back      {margin-left: auto; margin-right:40px; }
   }
+  &.reduce-to-cancel{border:none; margin:10px 0 -10px;
+    .step-count, .back, .step-title{display:none}
+    .cancel{margin-left: auto;}
+  }
 }
 
 .step-manager         {
