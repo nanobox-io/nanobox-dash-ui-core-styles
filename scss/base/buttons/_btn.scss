@@ -11,4 +11,5 @@ $btn-color:#00ADFE;
     &:hover       {color:#273D4B; background:#B6C9D4;}
   }
   &.delete        {background:#F27E8F;}
+  &.disabled      {opacity:0.5; pointer-events: none; }
 }
