@@ -134,3 +134,10 @@
 @mixin selectable(){
   user-select: all;
 }
+
+@mixin shadowed($x:0, $y:3px, $blur:3px, $color:rgba(#000, 0.2) ) {
+  -webkit-filter: drop-shadow($x $y $blur $color);
+  filter        : drop-shadow($x $y $blur $color);
+  // -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
+  // filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
+}
