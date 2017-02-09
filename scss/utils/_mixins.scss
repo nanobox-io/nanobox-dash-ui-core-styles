@@ -77,9 +77,9 @@
 }
 
 //
-@mixin selection-color($color){
-  ::selection { background:$color; }
-  ::-moz-selection { background:$color; }
+@mixin selection-color($bg-color, $color:#000000 ){
+  ::selection { background:$bg-color; color:$color; }
+  ::-moz-selection { background:$bg-color; color:$color; }
 }
 
 //
@@ -120,6 +120,6 @@
   text-overflow:  ellipsis;
 }
 
-@mixin selectable(){
-  user-select: all;
+@mixin selectable($val:all){
+  user-select: $val;
 }
