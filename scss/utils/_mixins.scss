@@ -1,4 +1,15 @@
 //
+@mixin placeholderTxtColor($color)  {
+  &::-webkit-input-placeholder      {color: $color}
+  &:-moz-placeholder                {color: $color}
+  &:-ms-input-placeholder           {color: $color}
+  &::-moz-placeholder               {color: $color}
+}
+
+// This is being called in olark, but doesn't exist..
+@mixin placeholder($color){}
+
+//
 @mixin align( $align ) {
   position:relative;
 
@@ -122,4 +133,11 @@
 
 @mixin selectable($val:all){
   user-select: $val;
+}
+
+@mixin shadowed($x:0, $y:3px, $blur:3px, $color:rgba(#000, 0.2) ) {
+  -webkit-filter: drop-shadow($x $y $blur $color);
+  filter        : drop-shadow($x $y $blur $color);
+  // -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
+  // filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
 }

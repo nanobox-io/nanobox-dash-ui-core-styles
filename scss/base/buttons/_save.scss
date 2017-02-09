@@ -1,13 +1,13 @@
 // button.save styles; these styles should be independent of the location of the
 // save button.
-button.save             {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; min-width:135px; padding:0px 15px; color:$white; background:#4B6373; height:40px;
+button.save             {@include transition(background, 0.1s); @include border-radius; @include font-size(13px); display:flex; align-items:center; position:relative; min-width:136px; padding:0px 15px; color:$white; background:#4B6373; height:40px;
 
   // this is the default content for the button, if this needs to be changed it
   // should be handled on a per button basis as its probably based entirely off
   // of context
-  &:after               {content:'Save Changes'; margin-left:8px;}
+  &:after               {content:'Save Changes';}
 
-  #check-mark           {display:block; path {fill:#01EFBC;}}
+  #check-mark           {display:block; margin-right:8px; path {fill:#01EFBC;}}
 
   //
   &:hover               {color:#1FF6C8; background:#1C3444; #check-mark {path {fill:white;}}}
@@ -28,6 +28,6 @@ button.save             {@include transition(background, 0.1s); @include border-
     &:hover             {background: white;}
   }
 
-  // 
+  //
   &.saving              {.save-zone {.cancel {display:none;}}}
 }

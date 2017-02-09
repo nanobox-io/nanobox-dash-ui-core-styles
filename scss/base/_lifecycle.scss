@@ -20,7 +20,7 @@
   }
 
   //
-  &:before  {border-radius: 50%; width: 20px; height: 20px;}
+  &:before      {margin-right:8px; width:18px; height:18px; border-radius:50%;}
 
   //
   @-webkit-keyframes loaderanim {
@@ -35,14 +35,12 @@
   }
 
   //
-  &.ing         {pointer-events: none; 
-    &:before    {display:block;}
-  }
+  &.ing         {pointer-events: none; &:before {display:block;}}
 }
 
 // general lifecycle styles of anchor tags; specifics like color need to be handled
 // on a contextual level
-a.lifecycle     {
+a.lifecycle     {display:flex; align-items:center;
   &.ing         {& > * {display:none;} &:before {display:block;}}
   &.delete      {&:before {border-left: 1px solid #f58397;}}
 }

@@ -1,4 +1,11 @@
-$cool:  #64C41D !important;
-$warm:  #FEA540 !important;
-$hot:   #ED4545 !important;
-$sleep: #DEDEDE !important;
+//
+$_cool:  #64C41D;
+$_warm:  #FEA540;
+$_hot:   #ED4545;
+$_sleep: #DEDEDE;
+
+// 
+$cool:  $_cool !important;
+$warm:  $_warm !important;
+$hot:   $_hot !important;
+$sleep: $_sleep !important;

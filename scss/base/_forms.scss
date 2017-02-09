@@ -1,22 +1,27 @@
 
 //
 form                          {display:flex; flex-direction:column; width:100%;
-  .row                        {display:flex; align-items:center; justify-content:space-between; width:100%; margin:0px 0px; padding:0px;
 
-    &:not(:last-child)        {margin-bottom:25px;}
+  //
+  .label                      {@include font-size(13px); color:$dashboard_20;
+    &:not(&.boolean)          {margin-bottom:5px;}
+    label                     {color:inherit;}
+  }
 
-    //
-    .label                    {@include font-size(13px); margin-bottom:5px; color:$dashboard_20;
-      label                   {color:inherit;}
+  //
+  .input                      {
+    &.field_with_errors       {
+      input                   {border:1px solid $dashboard_126 !important; background:#ffe6e6;}
     }
+  }
+
+  //
+  .row                        {display:flex; align-items:center; justify-content:space-between; width:100%; margin:0px 0px; padding:0px;
+    &:not(:last-child)        {margin-bottom:25px;}
 
     //
     .input                    {flex:1 1 100%;
       &:not(:last-child)      {margin-right:15px;}
-
-      &.field_with_errors     {
-        input                 {border:1px solid $dashboard_126; background:#ffe6e6;}
-      }
     }
   }
 

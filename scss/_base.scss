@@ -58,8 +58,12 @@ body {font-family: $proxima;
 
 //
 @import 'base/buttons';
+@import 'base/ui/base';
 @import 'base/dropdowns';
 @import 'base/forms';
 @import 'base/inputs';
+@import 'base/steps/steps';
 @import 'base/lifecycle';
-@import 'base/modals';
+@import 'base/component-shared';
+
+.temp-test-red{background:red !important; }
