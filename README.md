@@ -19,3 +19,30 @@ EXAMPLE: `/stage/stage.scss` should include `styles.scss` like so:
 ```
 @import "../libs/core-styles/styles.scss";
 ```
+
+### Usage
+
+#### Adding to a project
+
+```bash
+git submodule add git@github.com:nanobox-io/nanobox-dash-ui-core-styles.git
+```
+
+NOTE: in all Nanobox projects the submodule is added in `/lib/assets/core-styles` so the above command would look like this:
+
+```bash
+git submodule add git@github.com:nanobox-io/nanobox-dash-ui-core-styles.git /lib/assest/core-styles
+```
+
+#### Existing Submodule
+
+```bash
+git submodule init
+git submodule update
+```
+
+#### Updating
+
+```bash
+git submodule foreach pull git origin master
+```
