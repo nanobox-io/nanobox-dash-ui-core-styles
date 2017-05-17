@@ -2,7 +2,7 @@ $blue : #0072C3;
 $btn-height:40px;
 $btn-color:#00ADFE;
 
-.btn              {position: relative; background: $btn-color; height:$btn-height; display: inline-flex; align-items: center; padding:0 20px; font-style:italic; color:white; font-weight:$semibold; cursor:pointer;  font-style: italic; font-size: 14px;
+.btn.basic        {position: relative; background: $btn-color; height:$btn-height; display: inline-flex; align-items: center; padding:0 20px; font-style:italic; color:white; font-weight:$semibold; cursor:pointer;  font-style: italic; font-size: 14px;
   &:hover         {background:#0091E3}
   &.lifecycle.ing {
     &:before      {margin-right:10px; }
@@ -11,4 +11,5 @@ $btn-color:#00ADFE;
     &:hover       {color:#273D4B; background:#B6C9D4;}
   }
   &.delete        {background:#F27E8F;}
+  &.disabled      {opacity:0.5; pointer-events: none; }
 }

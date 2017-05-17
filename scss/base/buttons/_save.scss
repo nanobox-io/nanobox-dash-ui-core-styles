@@ -18,7 +18,7 @@ button.save             {@include transition(background, 0.1s); @include border-
   }
 
   // display
-  &.disabled            {color:$dashboard_20; background:$dashboard_6; pointer-events:none; cursor:not-allowed;}
+  &.disabled            {color:$dashboard_20; background:$dashboard_6; pointer-events:none;}
 }
 
 // these styles control the look of the save-zone and anything inside of it;

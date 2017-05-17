@@ -27,7 +27,7 @@
         table         {margin:40px 0 0;
           tr          {}
           td          {vertical-align: middle; padding-bottom: 20px; white-space:nowrap;
-            &.label   {@include label;padding-right:10px;
+            &.label   {@include label;padding-right:10px; padding-left:0; display:table-cell;
               &:after {content:" : "}
             }
             &:last-of-type {width: 100%;

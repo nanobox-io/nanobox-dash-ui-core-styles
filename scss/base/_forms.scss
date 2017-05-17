@@ -27,8 +27,8 @@ form                          {display:flex; flex-direction:column; width:100%;
 
   // dirty/clean handling
   &:not(.nodirrty)            {
-    button.save, .save-zone   {@include transition(opacity, 0.15s); opacity:0; pointer-events:none;}
-    &.dirty                   {button.save, .save-zone{opacity:1; pointer-events:initial;}}
+    .save-zone, button.save   {@include transition(opacity, 0.15s); opacity:0; pointer-events:none;}
+    &.dirty                   {.save-zone, button.save {opacity:1; pointer-events:initial;}}
   }
 }
 
