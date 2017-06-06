@@ -11,9 +11,6 @@
   &::-moz-placeholder               {color: $color}
 }
 
-// This is being called in olark, but doesn't exist..
-@mixin placeholder($color){}
-
 //
 @mixin align( $align ) {
   position:relative;
