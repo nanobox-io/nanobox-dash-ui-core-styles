@@ -1,0 +1,6 @@
+@mixin title($border-color:#BEC2CB, $pad-bottom:8px, $margin-bottom:8px ) {
+  @include caps(#1D4250, 14px);
+  border-bottom:solid 1px $border-color;
+  padding-bottom:$pad-bottom;
+  margin-bottom:$margin-bottom;
+}
