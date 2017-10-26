@@ -162,6 +162,15 @@
 	.st156{fill:#77E5F7;}
 	.st157{fill:#BF1E2D;}
 	.st158{fill:#FCCFD1;}
+	.st159{fill:#EA9446;}
+	.st160{fill:#F1BD8E;}
+	.st161{fill:#EB9E5B;}
+	.st162{fill:#E7832D;}
+	.st163{fill:#E88939;}
+	.st164{fill:#E67E26;}
+	.st165{fill:#E98E40;}
+	.st166{fill:#E77F29;}
+	.st167{fill:#E68129;}
 </style>
 <g id="hex-wordpress_x60_46x54">
 	<polygon class="st0" points="45.944,39.791 22.969,53.054 0,39.791 0,13.264 22.969,0 45.944,13.264 	"/>
@@ -1098,5 +1107,16 @@
 	<rect x="13.69" y="15.347" class="st2" width="1.695" height="21.794"/>
 	<path class="st2" d="M15.645,15.347H13.69c0,0,16.919,27.653,21.023,30.018L15.645,15.347z"/>
 	<polygon class="st2" points="32.246,15.347 30.551,15.347 30.551,34.429 32.246,37.609 	"/>
+</g>
+<g id="hex-amber_x60_47x54">
+	<polygon class="st159" points="23.18,0 0,13.383 0,40.15 23.18,53.533 46.361,40.15 46.361,13.383 	"/>
+	<polygon class="st160" points="0,13.383 5.132,28.526 23.18,0 	"/>
+	<polygon class="st161" points="0,40.15 5.132,28.526 0,13.383 	"/>
+	<polygon class="st162" points="23.18,53.533 5.132,28.526 0,40.15 	"/>
+	<polygon class="st163" points="5.132,28.526 30.997,42.182 23.18,53.533 	"/>
+	<polygon class="st164" points="46.361,40.15 38.721,19.94 46.361,13.383 	"/>
+	<polygon class="st165" points="30.997,42.182 38.721,19.94 46.361,40.15 	"/>
+	<polygon class="st166" points="5.132,28.526 38.721,19.94 30.997,42.182 	"/>
+	<polygon class="st167" points="23.18,0 38.721,19.94 46.361,13.383 	"/>
 </g>
 </svg>
