@@ -1,0 +1,7 @@
+{
+  "name": "nanobox-core-styles",
+  "version": "0.0.1",
+  "description": "Core styles from dashboard.nanobox.io",
+  "author": "Mark Parson <mark@nanobox.io>",
+  "private": true
+}
