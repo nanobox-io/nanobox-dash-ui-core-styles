@@ -7,8 +7,15 @@
 }
 
 //
+label {
+  width: intrinsic;               /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;        /* Firefox/Gecko */
+  width: -webkit-max-content;     /* Chrome */
+}
+
+//
 input                               {@include font-size(17px);
-  &:not([type="radio"]),             {@include transition(all, 0.08s); @include placeholderTxtColor($dashboard_16); color:#487382; height:45px; padding:6px 10px; font-style:italic; background:$white;}
+  &:not([type="radio"]),            {@include transition(all, 0.08s); @include placeholderTxtColor($dashboard_16); color:#487382; height:45px; padding:6px 10px; font-style:italic; background:$white;}
 
   // the reason we have to do this is because once you apply any style to a select
   // it kills all OS styles and defaults to user agent styles (and we don't want
@@ -18,7 +25,13 @@ input                               {@include font-size(17px);
 input[type="submit"]                {font-style:initial; cursor:pointer;}
 
 //
-select                              {height:20px; }
+select                              {width:100%; height:45px; padding:0px 10px; box-shadow:none; border:none; outline:none; color:$dashboard_73; background:$white; cursor:pointer;
+  -webkit-appearance:     none;
+  -moz-appearance:        none;
+  -ms-appearance:         none;
+  -o-appearance:          none;
+  appearance:             none;
+}
 
 
 //
@@ -30,17 +43,24 @@ select                              {height:20px; }
   // TYPES
 
   // checkboxes
-  &.boolean                         {flex-direction:row; align-items:flex-start; justify-content:space-between;& > *                         {cursor:pointer;}
+  &.boolean                         {flex-direction:row; align-items:flex-start;
     & > *                           {cursor:pointer;}
-    label                           {@include font-size(14px); width:96%; margin:0px; color:$dashboard_42;}
+    label                           {@include font-size(14px); margin:0px 8px; color:$dashboard_42;}
     input                           {height:auto;}
   }
 
   // radio buttons
-  &.radio_buttons                   {flex-direction:row; align-items:flex-start; justify-content:space-between;& > *                         {cursor:pointer;}
+  &.radio_buttons                   {flex-direction:row; align-items:flex-start;
     & > *                           {cursor:pointer;}
     label                           {@include font-size(14px); margin:0px; color:$dashboard_42;}
     input                           {height:auto;}
+  }
+
+  &.select                          {position:relative;
+    &:after                         {@include arrow('down', $dashboard_73, 0.40); content:""; position:absolute; top:50%; right:0px;}
+    // &:hover:after                   {@include arrow('down', $dashboard_73, 0.40); content:"";}
+
+    &.inline                        {&:after {top:20%;}}
   }
 
   // STATES
