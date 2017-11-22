@@ -1,0 +1,15 @@
+// button.save styles; these styles should be independent of the location of the
+// save button.
+button.upgrade          {@include transition(background, 0.1s); @include font-size(13px); display:flex; align-items:center; position:relative; min-width:136px; height:40px; padding:0px 15px; color:$white; background:#19aaf4; font-style:italic;
+
+  // this is the default content for the button, if this needs to be changed it
+  // should be handled on a per button basis as its probably based entirely off
+  // of context
+  &:after               {content:'Upgrade';}
+
+  //
+  &:hover               {background:#007dd7;}
+
+  // display
+  &.disabled            {color:$dashboard_20; background:$dashboard_6; pointer-events:none;}
+}

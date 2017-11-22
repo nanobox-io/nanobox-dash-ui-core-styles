@@ -15,6 +15,8 @@
   vertical-align:top;
   border-collapse:collapse;
   resize:none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   // border:none;
   // background:none;
 }
