@@ -133,7 +133,7 @@
   text-overflow:  ellipsis;
 }
 
-@mixin selectable($val:all){
+@mixin selectable($val:text){
   user-select: $val;
 }
 
