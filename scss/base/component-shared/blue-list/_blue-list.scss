@@ -7,7 +7,7 @@
         .label {font-style: italic; font-weight: $semibold; margin-right:4px;
           &:after{content:" :"}
         }
-        .val   {font-weight:bold;  max-width: 132px; overflow: hidden; text-overflow: ellipsis; }
+        .val   {font-weight:bold;  max-width: 132px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 20px;}
       }
     }
     .button    {color:#09AEF7; font-size:14px; font-style:italic; height:28px; padding:0 25px; margin:40px 20px 0 0; background:white;}
