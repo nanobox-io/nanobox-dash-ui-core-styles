@@ -68,6 +68,7 @@ body {font-family: $proxima;
 @import 'base/steps/steps';
 @import 'base/lifecycle';
 @import 'base/component-shared';
+@import 'base/obfuscation';
 @import 'base/lexi';
 
 .temp-test-red{background:red !important; }

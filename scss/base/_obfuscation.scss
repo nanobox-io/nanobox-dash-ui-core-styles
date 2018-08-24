@@ -1,0 +1,19 @@
+.obfuscate{transition:all 150ms; position: relative;
+  &:not(:hover),
+  &:not(:hover) * {
+  	color:transparent !important;
+    text-shadow:0 0 15px #044F94;
+	}
+  &.white{
+    &:not(:hover),
+    &:not(:hover) *
+    {
+      text-shadow:0 0 15px white;
+    }
+    &:after{background: white; color:#09A6EC !important; }
+  }
+  &:after{content:"(hover to show)"; background: #09A6EC; color:white !important; font-size:10px; padding:3px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.04em; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-shadow:initial; opacity:1; transition: all 150ms; font-style: normal;}
+  &:hover:after{opacity:0}
+  &.abrv:after{content:"(show text)"}
+  &.right:after{left: initial; transform: translateY(-50%); right:0;}
+}
